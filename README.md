@@ -30,13 +30,13 @@ I write about:
 
 ## Collaboration Workflow
 
-All site updates happen through conversation with an AI assistant:
-- Content creation (blog posts, pages)
+I write all my own content. The AI assistant helps with:
+- Technical implementation (site structure, features, configuration)
 - Design tweaks and layout changes
-- Configuration updates
-- New features and sections
+- Polishing and refining blog posts
+- Managing deployments and updates
 
-This approach lets me focus on content while technical implementation is handled efficiently.
+This approach lets me focus on writing and ideas while technical implementation is handled efficiently.
 
 ## Live Site
 
