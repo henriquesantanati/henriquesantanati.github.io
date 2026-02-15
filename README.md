@@ -1,10 +1,10 @@
 # Henrique Santana's Personal Website
 
-Personal website and blog showcasing my work in cloud infrastructure, containers, and AI/ML.
+Personal website and blog built collaboratively with AI assistance.
 
-## About This Site
+## About This Project
 
-This is my professional website where I share technical insights, speaking engagements, and thoughts on building infrastructure at scale.
+This site is built and maintained through a collaborative workflow with an AI assistant. I focus on content direction and what I want to say, while the AI handles the technical implementation, allowing me to maintain a professional web presence without getting bogged down in the details.
 
 ## Tech Stack
 
@@ -28,10 +28,20 @@ I write about:
 - Infrastructure operations at scale
 - Production lessons from real-world systems
 
+## Collaboration Workflow
+
+All site updates happen through conversation with an AI assistant:
+- Content creation (blog posts, pages)
+- Design tweaks and layout changes
+- Configuration updates
+- New features and sections
+
+This approach lets me focus on content while technical implementation is handled efficiently.
+
 ## Live Site
 
 🌐 **[henriquesantanati.github.io](https://henriquesantanati.github.io/)**
 
 ---
 
-Built with ❤️ by Henrique Santana
+Built with ❤️ by Henrique Santana, in collaboration with AI
