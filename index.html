@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 ---
 
 <div style="margin-bottom: 3rem;">
@@ -11,3 +11,20 @@ layout: home
   
   <p>Speaker at AWS re:Invent, KubeCon, and other technical conferences. I write about what actually works in production on the <a href="https://aws.amazon.com/blogs/containers/" target="_blank">AWS Containers Blog</a>.</p>
 </div>
+
+<hr style="margin: 3rem 0;">
+
+<h2>Recent Posts</h2>
+
+<ul>
+  {% for post in site.posts limit:5 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span style="color: #666; font-size: 0.9em;">— {{ post.date | date: "%B %d, %Y" }}</span>
+    </li>
+  {% endfor %}
+</ul>
+
+<p style="margin-top: 2rem;">
+  <a href="/archives/">View all posts →</a>
+</p>
