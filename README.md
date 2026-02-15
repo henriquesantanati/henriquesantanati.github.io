@@ -1,66 +1,39 @@
 # Henrique Santana's Personal Website
 
-Personal website built with Jekyll and hosted on GitHub Pages.
+Personal website and blog built collaboratively with Aki, an AI assistant.
 
-## Local Development
+## About This Project
 
-### Prerequisites
-- Ruby 2.7+ (check with `ruby --version`)
-- Bundler (install with `gem install bundler`)
+This site is built and maintained through a collaborative workflow where I guide Aki to implement features, write content, and manage the technical aspects. Rather than manually running commands or editing files, I describe what I want and Aki handles the implementation.
 
-### Setup
-```bash
-# Install dependencies
-bundle install
+## Tech Stack
 
-# Run local server
-bundle exec jekyll serve
+- **Framework**: Jekyll 4.3
+- **Theme**: [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) (modern, dark mode)
+- **Hosting**: GitHub Pages
+- **Deployment**: Automatic via GitHub Actions
 
-# View at http://localhost:4000
-```
+## Site Structure
 
-## Creating Content
+- **Homepage**: Introduction + recent posts
+- **About**: Professional bio, speaking, technical focus
+- **Blog**: Technical posts about containers, AI/ML, and infrastructure
+- **Categories/Tags**: Auto-generated content organization
 
-### Blog Posts
-Create files in `_posts/` with format: `YYYY-MM-DD-title.md`
+## Collaboration Workflow
 
-Example frontmatter:
-```yaml
----
-layout: post
-title: "My Blog Post Title"
-date: 2026-02-15 21:30:00 -0800
-categories: tech aws
-tags: [containers, kubernetes, eks]
----
-```
+All site updates happen through conversation with Aki:
+- Content creation (blog posts, pages)
+- Design tweaks and layout changes
+- Configuration updates
+- New features and sections
 
-### Drafts
-Put work-in-progress posts in `_drafts/` (no date required in filename).
+This approach allows me to focus on content and direction while Aki handles the technical implementation.
 
-View drafts locally: `bundle exec jekyll serve --drafts`
+## Live Site
 
-### Pages
-Create `.md` files in the root directory with frontmatter:
-```yaml
----
-layout: page
-title: Page Title
-permalink: /page-url/
----
-```
+🌐 **[henriquesantanati.github.io](https://henriquesantanati.github.io/)**
 
-## Deployment
+## Content
 
-GitHub Pages automatically builds and deploys when you push to `main` branch.
-
-## Customization
-
-- Edit `_config.yml` for site-wide settings
-- Modify layouts in `_layouts/` (if needed)
-- Add custom CSS in `assets/css/`
-- Theme documentation: [Minima](https://github.com/jekyll/minima)
-
-## License
-
-Content is © Henrique Santana. Code is MIT licensed.
+Built with ❤️ by Henrique Santana, in collaboration with Aki.
