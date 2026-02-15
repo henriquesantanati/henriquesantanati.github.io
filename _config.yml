@@ -1,9 +1,8 @@
 # Site settings
 title: Henrique Santana
-email: carlos.henrique.s.santana@gmail.com
 description: >-
-  Principal Cloud Support Engineer at AWS specializing in container technologies 
-  including Amazon ECS and Amazon EKS
+  Principal Cloud Support Engineer at AWS. Containers, Kubernetes, and AI/ML infrastructure.
+  Speaker at AWS re:Invent and KubeCon.
 baseurl: "" # subpath of your site, e.g. /blog
 url: "https://henriquesantanati.github.io" # base hostname & protocol
 github_username: henriquesantanati
