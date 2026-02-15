@@ -1,10 +1,10 @@
 # Henrique Santana's Personal Website
 
-Personal website and blog built collaboratively with Aki, an AI assistant.
+Personal website and blog showcasing my work in cloud infrastructure, containers, and AI/ML.
 
-## About This Project
+## About This Site
 
-This site is built and maintained through a collaborative workflow where I guide Aki to implement features, write content, and manage the technical aspects. Rather than manually running commands or editing files, I describe what I want and Aki handles the implementation.
+This is my professional website where I share technical insights, speaking engagements, and thoughts on building infrastructure at scale.
 
 ## Tech Stack
 
@@ -20,20 +20,18 @@ This site is built and maintained through a collaborative workflow where I guide
 - **Blog**: Technical posts about containers, AI/ML, and infrastructure
 - **Categories/Tags**: Auto-generated content organization
 
-## Collaboration Workflow
+## Topics
 
-All site updates happen through conversation with Aki:
-- Content creation (blog posts, pages)
-- Design tweaks and layout changes
-- Configuration updates
-- New features and sections
-
-This approach allows me to focus on content and direction while Aki handles the technical implementation.
+I write about:
+- Container orchestration (Amazon ECS, Amazon EKS, Kubernetes)
+- AI/ML infrastructure and GPU workloads
+- Infrastructure operations at scale
+- Production lessons from real-world systems
 
 ## Live Site
 
 🌐 **[henriquesantanati.github.io](https://henriquesantanati.github.io/)**
 
-## Content
+---
 
-Built with ❤️ by Henrique Santana, in collaboration with Aki.
+Built with ❤️ by Henrique Santana
