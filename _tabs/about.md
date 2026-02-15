@@ -1,10 +1,8 @@
 ---
-layout: page
-title: About
-permalink: /about/
+# the default layout is 'page'
+icon: fas fa-info-circle
+order: 4
 ---
-
-# About Me
 
 I'm Henrique Santana, a Principal Cloud Support Engineer at AWS with over 15 years of experience in infrastructure operations. I help teams run containers at scale and, increasingly, build infrastructure for generative AI and machine learning workloads.
 
