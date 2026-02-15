@@ -6,44 +6,46 @@ permalink: /about/
 
 # About Me
 
-I'm Henrique Santana, a Principal Cloud Support Engineer at AWS with over 15 years of experience in infrastructure operations. My passion lies in helping organizations modernize their technology stacks through container adoption and cloud-native architectures.
+I'm Henrique Santana, a Principal Cloud Support Engineer at AWS with over 15 years of experience in infrastructure operations. I help teams run containers at scale and, increasingly, build infrastructure for generative AI and machine learning workloads.
 
 ## What I Do
 
-I specialize in container technologies, particularly **Amazon ECS** and **Amazon EKS**, where I help customers design, deploy, and optimize containerized workloads at scale. My work involves:
+I specialize in container technologies—**Amazon ECS** and **Amazon EKS**—helping customers run everything from traditional microservices to large-scale AI/ML inference workloads. Lately, I've been deep in the intersection of containers and generative AI, working with teams deploying LLMs, training pipelines, and GPU-accelerated workloads on Kubernetes.
 
-- Delivering expert technical support for complex container deployments
-- Managing critical customer escalations
-- Contributing to AWS blogs and technical documentation
-- Speaking at international conferences about container best practices
+My day-to-day includes:
+
+- Solving complex technical problems for container and AI workloads
+- Managing critical escalations when things break at scale
+- Writing technical content for the AWS blog
+- Speaking at conferences about what actually works (and what doesn't)
 
 ## Speaking & Community
 
-I'm an active member of the cloud and containers community, speaking at major technical conferences including:
+I speak at technical conferences when I have something worth sharing:
 
 - AWS re:Invent
 - KubeCon
-- Various AWS Community events
+- AWS Community events
 
-I believe in sharing knowledge and empowering teams to build scalable, resilient cloud architectures.
+The goal is always to share what I've learned from real production systems—the successes, the failures, and the lessons in between.
 
 ## Technical Focus
 
-My expertise spans:
+What I work with most:
 
 - **Container Orchestration**: Amazon ECS, Amazon EKS, Kubernetes
-- **Infrastructure Operations**: Automation, monitoring, high availability
+- **AI/ML Infrastructure**: GPU clusters, LLM inference, training pipelines
+- **Infrastructure Operations**: Automation, monitoring, keeping things running
 - **Cloud Architecture**: AWS services, serverless containers, event-driven systems
-- **DevOps Practices**: CI/CD, infrastructure as code, observability
 
-## Publications
+## Writing
 
-I regularly contribute technical content to the [AWS Containers Blog](https://aws.amazon.com/blogs/containers/), covering topics like:
+I contribute to the [AWS Containers Blog](https://aws.amazon.com/blogs/containers/) when I have something useful to share:
 
-- ECS and EKS best practices
-- Container monitoring and observability
-- Migration strategies
-- Event-driven architectures with containers
+- Container best practices that actually work in production
+- Monitoring and observability patterns
+- Running AI/ML workloads on Kubernetes
+- Event-driven architectures
 
 ## Connect
 
