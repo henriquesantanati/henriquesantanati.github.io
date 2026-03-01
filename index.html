@@ -1,30 +1,850 @@
----
-layout: page
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Henrique Santana — Principal Cloud Support Engineer at AWS</title>
+  <meta name="description" content="15+ years building infrastructure. Principal Cloud Support Engineer at AWS specializing in containers, Kubernetes, and AI/ML workloads.">
 
-<div style="margin-bottom: 3rem;">
-  <h1>Hi, I'm Henrique Santana 👋</h1>
-  
-  <p>Principal Cloud Support Engineer at AWS with over 15 years of experience in infrastructure operations. I help teams run containers at scale and build infrastructure for generative AI and machine learning workloads.</p>
-  
-  <p>I specialize in <strong>Amazon ECS</strong> and <strong>Amazon EKS</strong>, working with everything from traditional microservices to large-scale AI/ML inference, LLMs, and GPU-accelerated workloads on Kubernetes.</p>
-  
-  <p>Speaker at AWS re:Invent, KubeCon, and other technical conferences. I write about what actually works in production on the <a href="https://aws.amazon.com/blogs/containers/" target="_blank">AWS Containers Blog</a>.</p>
-</div>
+  <!-- Favicon: inline data URI ensures no caching issues -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F2EC'/%3E%3Crect x='0.5' y='0.5' width='31' height='31' fill='none' stroke='%23B07D3A' stroke-width='1'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-style='italic' fill='%231A1814' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="assets/img/favicons/site.webmanifest">
 
-<hr style="margin: 3rem 0;">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 
-<h2>Recent Posts</h2>
+  <style>
+    /* ─── RESET & TOKENS ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<ul>
-  {% for post in site.posts limit:5 %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <span style="color: #666; font-size: 0.9em;">— {{ post.date | date: "%B %d, %Y" }}</span>
-    </li>
-  {% endfor %}
-</ul>
+    :root {
+      --bg:       #F5F2EC;
+      --bg-alt:   #EDEAD3;
+      --bg-dark:  #1A1814;
+      --text:     #1A1814;
+      --text-mid: #4A4540;
+      --muted:    #8A837A;
+      --accent:   #B07D3A;
+      --accent-lt:#C9983F;
+      --border:   #D8D2C6;
+      --border-lt:#E8E3DA;
 
-<p style="margin-top: 2rem;">
-  <a href="/archives/">View all posts →</a>
-</p>
+      --font-display: 'Cormorant Garant', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+
+      --nav-h: 72px;
+      --max-w: 1100px;
+      --pad:   clamp(1.5rem, 5vw, 4rem);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+
+    /* ─── UTILITY ────────────────────────────────────────── */
+    .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; overflow: hidden; clip: rect(0,0,0,0);
+      white-space: nowrap; border: 0;
+    }
+
+    /* ─── SCROLL ANIMATIONS ──────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── NAV ────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: rgba(245, 242, 236, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-lt);
+      display: flex;
+      align-items: center;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2.5rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 0; height: 1px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after { width: 100%; }
+
+    /* ─── HERO ───────────────────────────────────────────── */
+    .hero {
+      padding: clamp(4rem, 8vw, 7rem) var(--pad) clamp(4rem, 6vw, 6rem);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr min(28%, 280px);
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .eyebrow-line {
+      width: 32px;
+      height: 1px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      font-weight: 300;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 1.75rem;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-desc {
+      color: var(--text-mid);
+      font-size: 1rem;
+      max-width: 460px;
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--text);
+      color: var(--bg);
+      padding: 0.8rem 1.85rem;
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.22s, color 0.22s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--accent); }
+    .btn-text {
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .btn-text:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* PHOTO */
+    .hero-photo { position: relative; }
+    .photo-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .photo-wrap img {
+      width: 100%;
+      max-height: 300px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 8%;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .hero-photo:hover .photo-wrap img { transform: scale(1.02); }
+    .photo-ornament {
+      position: absolute;
+      bottom: -12px;
+      right: -12px;
+      width: 40%;
+      height: 40%;
+      border: 1px solid var(--accent);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* ─── RULE ───────────────────────────────────────────── */
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+
+    /* ─── ABOUT ──────────────────────────────────────────── */
+    .about {
+      padding: clamp(4rem, 6vw, 6rem) var(--pad);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: clamp(3rem, 5vw, 5rem);
+    }
+    .about-body p {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--text-mid);
+      max-width: 640px;
+    }
+    .about-body p strong { font-weight: 500; color: var(--text); }
+    .about-body p em { font-style: italic; color: var(--accent); }
+
+    /* ─── EXPERTISE ──────────────────────────────────────── */
+    .expertise {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .expertise-inner {
+      padding: clamp(4rem, 6vw, 6rem) var(--pad);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: clamp(3rem, 5vw, 5rem);
+    }
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .exp-item {
+      padding: 2rem 2.5rem 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .exp-item:nth-child(3),
+    .exp-item:nth-child(4) { border-bottom: none; }
+    .exp-item:nth-child(odd) {
+      padding-right: 2.5rem;
+      border-right: 1px solid var(--border);
+    }
+    .exp-item:nth-child(even) {
+      padding-left: 2.5rem;
+      padding-right: 0;
+    }
+    .exp-icon { display: none; }
+    .exp-item h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .exp-item p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.75;
+    }
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.85rem;
+    }
+    .exp-tag {
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--bg);
+    }
+
+    /* ─── SPEAKING ───────────────────────────────────────── */
+    .speaking {
+      padding: clamp(4rem, 6vw, 6rem) var(--pad);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: clamp(3rem, 5vw, 5rem);
+    }
+    .conf-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+      gap: 1rem;
+    }
+    .conf-item:first-child { border-top: 1px solid var(--border); }
+    .conf-name {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--text);
+    }
+    .conf-meta {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .speaking-note {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 520px;
+    }
+    .speaking-note a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .speaking-note a:hover { border-color: var(--accent); }
+
+    /* ─── WRITING ────────────────────────────────────────── */
+    .writing {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .writing-inner {
+      padding: clamp(4rem, 6vw, 6rem) var(--pad);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: clamp(3rem, 5vw, 5rem);
+    }
+    .writing-label-note {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .writing-label-note a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .writing-label-note a:hover { border-color: var(--accent); }
+    .writing-item {
+      padding: 1.35rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .writing-item:first-child { border-top: 1px solid var(--border); }
+    .writing-item a { text-decoration: none; display: block; }
+    .writing-category {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+    .writing-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.35;
+      transition: color 0.2s;
+      margin-bottom: 0.25rem;
+    }
+    .writing-item a:hover .writing-title { color: var(--accent); }
+    .writing-meta { font-size: 0.78rem; color: var(--muted); }
+    .writing-view-all {
+      padding: 1.5rem 0 0;
+    }
+    .writing-view-all a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--accent);
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+    .writing-view-all a:hover { border-color: var(--accent); }
+
+    /* ─── CONNECT ────────────────────────────────────────── */
+    .connect {
+      padding: clamp(5rem, 8vw, 8rem) var(--pad);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .connect-label { margin-bottom: 1.5rem; display: block; }
+    .connect h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+    .connect h2 em { font-style: italic; color: var(--accent); }
+    .connect-desc {
+      color: var(--text-mid);
+      font-size: 1rem;
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    .connect-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .connect-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 0.8rem 1.75rem;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .connect-link:hover { border-color: var(--accent); color: var(--accent); }
+    .connect-link.primary {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+    .connect-link.primary:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--bg);
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem var(--pad);
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+    .footer-copy strong { color: var(--text-mid); font-weight: 500; }
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .hero-photo { order: -1; max-width: 260px; }
+      .about,
+      .expertise-inner,
+      .speaking,
+      .writing-inner {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .exp-item {
+        padding: 1.5rem 0 !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--border) !important;
+      }
+      .exp-item:last-child { border-bottom: none !important; }
+      .nav-links { gap: 1.5rem; }
+    }
+    @media (max-width: 520px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Henrique Santana</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#speaking">Speaking</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────── -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-text">
+      <div class="hero-eyebrow reveal">
+        <div class="eyebrow-line"></div>
+        <span class="label">Principal Cloud Support Engineer · AWS</span>
+      </div>
+      <h1 class="hero-title reveal reveal-delay-1" id="hero-title">
+        Building the<br>
+        infrastructure that<br>
+        <em>scales</em> the future.
+      </h1>
+      <p class="hero-desc reveal reveal-delay-2">
+        15+ years at the intersection of cloud infrastructure, container orchestration, and generative AI. Helping teams run what matters most.
+      </p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="#writing" class="btn-primary">Read my writing</a>
+        <a href="https://www.linkedin.com/in/henriquessantana/" class="btn-text" target="_blank" rel="noopener">
+          LinkedIn
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://github.com/henriquesantanati" class="btn-text" target="_blank" rel="noopener">
+          GitHub
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-photo reveal reveal-delay-2">
+      <div class="photo-wrap">
+        <img src="assets/images/profile.jpg" alt="Henrique Santana, Principal Cloud Support Engineer at AWS" width="380" height="475">
+      </div>
+      <div class="photo-ornament" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- ── ABOUT ─────────────────────────────────────────────── -->
+  <section id="about" class="about" aria-labelledby="about-heading">
+    <div>
+      <span class="label reveal" id="about-heading">About</span>
+    </div>
+    <div class="about-body reveal reveal-delay-1">
+      <p>
+        I'm a <strong>Principal Cloud Support Engineer at AWS</strong> with over 15 years in infrastructure operations.
+        I specialize in container technologies, particularly <em>Amazon ECS and EKS</em>, helping customers run
+        everything from traditional microservices to AI/ML inference workloads. As generative AI increasingly
+        intersects with the container platforms I know best, I'm <strong>expanding into that space</strong> through
+        real customer work.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── EXPERTISE ─────────────────────────────────────────── -->
+  <section class="expertise" aria-labelledby="expertise-heading">
+    <div class="expertise-inner">
+      <div>
+        <span class="label reveal" id="expertise-heading">Expertise</span>
+      </div>
+      <div class="expertise-grid">
+        <div class="exp-item reveal">
+          <div class="exp-icon" aria-hidden="true">⬡</div>
+          <h3>Container Orchestration</h3>
+          <p>Amazon ECS and EKS at any scale, from startup microservices to enterprise platforms running millions of concurrent tasks.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Amazon EKS</span>
+            <span class="exp-tag">Amazon ECS</span>
+            <span class="exp-tag">Kubernetes</span>
+            <span class="exp-tag">Fargate</span>
+          </div>
+        </div>
+        <div class="exp-item reveal reveal-delay-1">
+          <div class="exp-icon" aria-hidden="true">◈</div>
+          <h3>AI / ML Infrastructure</h3>
+          <p>Containers and generative AI are converging fast. I work with customers running GPU workloads and LLM inference on ECS and EKS, building hands-on experience at an intersection that's still being figured out in production.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">LLM Inference</span>
+            <span class="exp-tag">GPU Workloads</span>
+            <span class="exp-tag">Kubernetes</span>
+          </div>
+        </div>
+        <div class="exp-item reveal reveal-delay-2">
+          <div class="exp-icon" aria-hidden="true">◇</div>
+          <h3>Cloud Architecture</h3>
+          <p>Serverless containers, event-driven systems, and the automation patterns that keep production reliable at 3am.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">AWS</span>
+            <span class="exp-tag">Serverless</span>
+            <span class="exp-tag">Event-Driven</span>
+          </div>
+        </div>
+        <div class="exp-item reveal reveal-delay-3">
+          <div class="exp-icon" aria-hidden="true">○</div>
+          <h3>Technical Leadership</h3>
+          <p>Critical escalation management, writing for the AWS Containers Blog, and speaking on production systems at global conferences.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Critical Escalations</span>
+            <span class="exp-tag">Technical Writing</span>
+            <span class="exp-tag">Conference Speaking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SPEAKING ───────────────────────────────────────────── -->
+  <section id="speaking" class="speaking" aria-labelledby="speaking-heading">
+    <div>
+      <span class="label reveal" id="speaking-heading">Speaking</span>
+    </div>
+    <div>
+      <div role="list">
+        <div class="conf-item reveal" role="listitem">
+          <span class="conf-name">AWS re:Invent</span>
+          <span class="conf-meta">Las Vegas, US</span>
+        </div>
+        <div class="conf-item reveal reveal-delay-1" role="listitem">
+          <span class="conf-name">KubeCon + CloudNativeCon</span>
+          <span class="conf-meta">EU & North America</span>
+        </div>
+        <div class="conf-item reveal reveal-delay-2" role="listitem">
+          <span class="conf-name">AWS Summit</span>
+          <span class="conf-meta">Europe</span>
+        </div>
+      </div>
+      <p class="speaking-note reveal reveal-delay-3">
+        I speak when I have something worth sharing: lessons from real production systems, not slide-deck theory.
+        Interested in having me speak at your event?
+        <a href="https://www.linkedin.com/in/henriquessantana/" target="_blank" rel="noopener">Reach out on LinkedIn ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- ── WRITING ────────────────────────────────────────────── -->
+  <section id="writing" class="writing" aria-labelledby="writing-heading">
+    <div class="writing-inner">
+      <div>
+        <span class="label reveal" id="writing-heading">Writing</span>
+        <p class="writing-label-note reveal reveal-delay-1">
+          Published on the<br>
+          <a href="https://aws.amazon.com/blogs/containers/" target="_blank" rel="noopener">AWS Containers Blog ↗</a>
+        </p>
+      </div>
+      <div>
+
+        <!-- ✏️ TO ADD A NEW POST: copy one writing-item block below and paste it here at the top.
+             Change the href, writing-category, writing-title, and writing-meta fields. -->
+
+        <div class="writing-item reveal">
+          <a href="https://aws.amazon.com/blogs/containers/monitor-amazon-ecs-events-with-amazon-eventbridge-filtering/" target="_blank" rel="noopener">
+            <div class="writing-category">ECS · EventBridge</div>
+            <div class="writing-title">Monitor Amazon ECS Events with Amazon EventBridge Filtering</div>
+            <div class="writing-meta">AWS Containers Blog</div>
+          </a>
+        </div>
+        <div class="writing-item reveal reveal-delay-1">
+          <a href="https://aws.amazon.com/blogs/containers/troubleshooting-with-amazon-ecs-exec-and-amazon-cloudwatch-logs-live-tail-in-the-aws-management-console/" target="_blank" rel="noopener">
+            <div class="writing-category">ECS · Troubleshooting</div>
+            <div class="writing-title">Troubleshooting with Amazon ECS Exec and Amazon CloudWatch Logs Live Tail in the AWS Management Console</div>
+            <div class="writing-meta">AWS Containers Blog</div>
+          </a>
+        </div>
+        <div class="writing-item reveal reveal-delay-2">
+          <a href="https://aws.amazon.com/blogs/containers/streamline-service-to-service-communication-during-deployments-with-amazon-ecs-service-connect/" target="_blank" rel="noopener">
+            <div class="writing-category">ECS · Networking</div>
+            <div class="writing-title">Streamline service-to-service communication during deployments with Amazon ECS Service Connect</div>
+            <div class="writing-meta">AWS Containers Blog</div>
+          </a>
+        </div>
+        <div class="writing-item reveal reveal-delay-3">
+          <a href="https://aws.amazon.com/blogs/containers/effortless-application-modernization-migrate-to-amazon-eks-with-existing-nlb-setup/" target="_blank" rel="noopener">
+            <div class="writing-category">EKS · Migration</div>
+            <div class="writing-title">Effortless application modernization: migrate to Amazon EKS with existing NLB setup</div>
+            <div class="writing-meta">AWS Containers Blog</div>
+          </a>
+        </div>
+        <div class="writing-item reveal">
+          <a href="https://containersonaws.com/pattern/ecs-advanced-container-health-check/" target="_blank" rel="noopener">
+            <div class="writing-category">ECS · Best Practices</div>
+            <div class="writing-title">Advanced Techniques for Amazon ECS Container Health Checks</div>
+            <div class="writing-meta">Containers on AWS</div>
+          </a>
+        </div>
+        <div class="writing-item reveal reveal-delay-1">
+          <a href="https://aws.amazon.com/blogs/containers/monitoring-the-amazon-ecs-agent/" target="_blank" rel="noopener">
+            <div class="writing-category">ECS · Monitoring</div>
+            <div class="writing-title">Monitoring the Amazon ECS Agent</div>
+            <div class="writing-meta">AWS Containers Blog</div>
+          </a>
+        </div>
+
+        <div class="writing-view-all reveal">
+          <a href="https://www.linkedin.com/in/henriquessantana/" target="_blank" rel="noopener">
+            Follow on LinkedIn to get notified of new posts
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONNECT ────────────────────────────────────────────── -->
+  <section id="connect" class="connect" aria-labelledby="connect-heading">
+    <span class="connect-label label reveal">Connect</span>
+    <h2 class="reveal reveal-delay-1" id="connect-heading">
+      Let's talk containers,<br>
+      <em>AI,</em> or what's next.
+    </h2>
+    <p class="connect-desc reveal reveal-delay-2">
+      Always interested in connecting with fellow engineers, collaborating on technical content, or speaking at events.
+    </p>
+    <div class="connect-links reveal reveal-delay-3">
+      <a href="https://www.linkedin.com/in/henriquessantana/" class="connect-link primary" target="_blank" rel="noopener">
+        LinkedIn
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="https://github.com/henriquesantanati" class="connect-link" target="_blank" rel="noopener">
+        GitHub
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <strong>Henrique Santana</strong> · Principal Cloud Support Engineer, AWS
+      </p>
+    </div>
+  </footer>
+
+  <!-- ── SCROLL REVEAL ──────────────────────────────────────── -->
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      // Trigger hero elements immediately (above fold)
+      document.querySelectorAll('.hero .reveal').forEach(function (el) {
+        el.classList.add('visible');
+      });
+
+      // Observe everything else
+      document.querySelectorAll('.reveal:not(.visible)').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>
