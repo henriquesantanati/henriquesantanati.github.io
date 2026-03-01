@@ -1,42 +1,41 @@
 # Henrique Santana's Personal Website
 
-Personal website and blog built collaboratively with AI assistance.
+Personal website built collaboratively with AI assistance.
 
 ## About This Project
 
-This site is built and maintained through a collaborative workflow with an AI assistant. I focus on content direction and what I want to say, while the AI handles the technical implementation, allowing me to maintain a professional web presence without getting bogged down in the details.
+This site is built and maintained through a collaborative workflow with an AI assistant. I focus on content direction and what I want to say, while the AI handles the technical implementation.
 
 ## Tech Stack
 
-- **Framework**: Jekyll 4.3
-- **Theme**: [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) (modern, dark mode)
+- **Stack**: Pure HTML, CSS, and JavaScript (no framework or static site generator)
 - **Hosting**: GitHub Pages
-- **Deployment**: Automatic via GitHub Actions
+- **Fonts**: Cormorant Garant + DM Sans via Google Fonts
 
 ## Site Structure
 
-- **Homepage**: Introduction + recent posts
-- **About**: Professional bio, speaking, technical focus
-- **Blog**: Technical posts about containers, AI/ML, and infrastructure
-- **Categories/Tags**: Auto-generated content organization
+Single-page design covering:
 
-## Topics
+- **Hero**: Introduction and quick links
+- **About**: Professional background
+- **Expertise**: Container orchestration, AI/ML infrastructure, cloud architecture, technical leadership
+- **Speaking**: Conference appearances (AWS re:Invent, KubeCon, AWS Summit)
+- **Writing**: Published posts on the AWS Containers Blog
+- **Connect**: LinkedIn and GitHub links
 
-I write about:
-- Container orchestration (Amazon ECS, Amazon EKS, Kubernetes)
-- AI/ML infrastructure and GPU workloads
-- Infrastructure operations at scale
-- Production lessons from real-world systems
+## Adding a New Blog Post
 
-## Collaboration Workflow
+Open `index.html` and find the comment in the Writing section:
 
-I write all my own content. The AI assistant helps with:
-- Technical implementation (site structure, features, configuration)
-- Design tweaks and layout changes
-- Polishing and refining blog posts
-- Managing deployments and updates
+```html
+<!-- ✏️ TO ADD A NEW POST: copy one writing-item block below and paste it here at the top. -->
+```
 
-This approach lets me focus on writing and ideas while technical implementation is handled efficiently.
+Copy any `<div class="writing-item">` block, paste it at the top of the list, and update:
+- `href` — link to the post
+- `writing-category` — e.g. `ECS · Monitoring`
+- `writing-title` — full post title
+- `writing-meta` — publication name
 
 ## Live Site
 
