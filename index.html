@@ -365,26 +365,59 @@
       grid-template-columns: 200px 1fr;
       gap: clamp(3rem, 5vw, 5rem);
     }
-    .conf-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 1.25rem 0;
+    .talk-item {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 0 1.5rem;
+      padding: 1.4rem 0;
       border-bottom: 1px solid var(--border);
-      gap: 1rem;
+      align-items: start;
     }
-    .conf-item:first-child { border-top: 1px solid var(--border); }
-    .conf-name {
+    .talk-item:first-child { border-top: 1px solid var(--border); }
+    .talk-year {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      font-weight: 500;
+      padding-top: 0.35rem;
+      text-align: right;
+    }
+    .talk-conference {
       font-family: var(--font-display);
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 400;
       color: var(--text);
+      line-height: 1.2;
     }
-    .conf-meta {
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
+    .talk-title {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--text-mid);
+      margin-top: 0.25rem;
+      line-height: 1.4;
+    }
+    .talk-meta {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .talk-tag {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid var(--border);
       color: var(--muted);
-      white-space: nowrap;
+      background: var(--bg);
+    }
+    .talk-location {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
     }
     .speaking-note {
       margin-top: 2rem;
@@ -718,26 +751,97 @@
     <div>
       <span class="label reveal" id="speaking-heading">Speaking</span>
     </div>
-    <div>
-      <div role="list">
-        <div class="conf-item reveal" role="listitem">
-          <span class="conf-name">AWS re:Invent</span>
-          <span class="conf-meta">Las Vegas, US</span>
-        </div>
-        <div class="conf-item reveal reveal-delay-1" role="listitem">
-          <span class="conf-name">KubeCon + CloudNativeCon</span>
-          <span class="conf-meta">EU & North America</span>
-        </div>
-        <div class="conf-item reveal reveal-delay-2" role="listitem">
-          <span class="conf-name">AWS Summit</span>
-          <span class="conf-meta">Europe</span>
+    <div role="list">
+
+      <div class="talk-item reveal" role="listitem">
+        <span class="talk-year">2025</span>
+        <div>
+          <div class="talk-conference">AWS re:Invent</div>
+          <div class="talk-title">Securing Amazon ECS workloads with application-aware networking</div>
+          <div class="talk-meta">
+            <span class="talk-tag">Workshop</span>
+            <span class="talk-location">Las Vegas, US</span>
+          </div>
         </div>
       </div>
+
+      <div class="talk-item reveal reveal-delay-1" role="listitem">
+        <span class="talk-year">2025</span>
+        <div>
+          <div class="talk-conference">AWS re:Invent</div>
+          <div class="talk-title">Autoscaling patterns for production workloads on Amazon ECS</div>
+          <div class="talk-meta">
+            <span class="talk-tag">Chalk Talk</span>
+            <span class="talk-location">Las Vegas, US</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="talk-item reveal reveal-delay-2" role="listitem">
+        <span class="talk-year">2025</span>
+        <div>
+          <div class="talk-conference">KubeCon + CloudNativeCon North America</div>
+          <div class="talk-title">From Monolith To Microservices: A Visual Journey for Beginners</div>
+          <div class="talk-meta">
+            <span class="talk-tag">Breakout</span>
+            <span class="talk-location">Utah, US</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="talk-item reveal reveal-delay-3" role="listitem">
+        <span class="talk-year">2025</span>
+        <div>
+          <div class="talk-conference">KubeCon + CloudNativeCon Europe</div>
+          <div class="talk-title">Surviving Day 2: Picking the Right Tool To Secure Your Kubernetes Habitat</div>
+          <div class="talk-meta">
+            <span class="talk-tag">Breakout</span>
+            <span class="talk-location">London, UK</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="talk-item reveal" role="listitem">
+        <span class="talk-year">2025</span>
+        <div>
+          <div class="talk-conference">AWS Summit London</div>
+          <div class="talk-title">Streamline Your Container Communication on Amazon ECS</div>
+          <div class="talk-meta">
+            <span class="talk-tag">Workshop</span>
+            <span class="talk-location">London, UK</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="talk-item reveal reveal-delay-1" role="listitem">
+        <span class="talk-year">2024</span>
+        <div>
+          <div class="talk-conference">KubeCon + CloudNativeCon North America</div>
+          <div class="talk-title">Kubernetes at Scale: Practical Solutions for Enhanced CNI and Kubelet Performance</div>
+          <div class="talk-meta">
+            <span class="talk-tag">Breakout</span>
+            <span class="talk-location">Utah, US</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="talk-item reveal reveal-delay-2" role="listitem">
+        <span class="talk-year">2024</span>
+        <div>
+          <div class="talk-conference">AWS re:Invent</div>
+          <div class="talk-title">Learn multi-tier application architectures on Amazon ECS</div>
+          <div class="talk-meta">
+            <span class="talk-tag">Workshop</span>
+            <span class="talk-location">Las Vegas, US</span>
+          </div>
+        </div>
+      </div>
+
       <p class="speaking-note reveal reveal-delay-3">
-        I speak when I have something worth sharing: lessons from real production systems, not slide-deck theory.
         Interested in having me speak at your event?
         <a href="https://www.linkedin.com/in/henriquessantana/" target="_blank" rel="noopener">Reach out on LinkedIn ↗</a>
       </p>
+
     </div>
   </section>
 
