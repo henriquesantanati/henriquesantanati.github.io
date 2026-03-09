@@ -1,0 +1,25 @@
+name: "security.txt expiry reminder"
+
+on:
+  schedule:
+    - cron: "0 9 1 11 *" # Runs November 1st every year
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open reminder issue
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: "Reminder: renew security.txt before January 2027",
+              body: "The `/.well-known/security.txt` file expires on **2027-01-01**.\n\nUpdate the `Expires` field and push before that date to stay compliant with RFC 9116.",
+              labels: []
+            })
