@@ -312,7 +312,7 @@
     }
     .about-body p {
       font-family: var(--font-display);
-      font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+      font-size: clamp(0.95rem, 1.5vw, 1.15rem);
       font-weight: 300;
       line-height: 1.6;
       color: var(--text-mid);
@@ -320,6 +320,16 @@
     }
     .about-body p strong { font-weight: 500; color: var(--text); }
     .about-body p em { font-style: italic; color: var(--accent); }
+    .about-body p + p {
+      margin-top: 1.5rem;
+    }
+    .about-body a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .about-body a:hover { border-color: var(--accent); }
 
     /* ─── EXPERTISE ──────────────────────────────────────── */
     .expertise {
@@ -734,10 +744,12 @@
       </p>
       <p>
         Originally from Brazil, I've spent nearly 20 years building infrastructure across media, energy, and
-        government sectors before moving to Dublin, where I co-founded <strong>Cloud Native Dublin</strong>,
+        government sectors before moving to Dublin, where I co-founded
+        <a href="https://community.cncf.io/cloud-native-dublin/" target="_blank" rel="noopener"><strong>Cloud Native Dublin</strong></a>,
         a community of 350 engineers that regularly brings practitioners together around container and
         cloud-native technologies. I also mentor engineers across career stages, contribute to the
-        <em>AWS Cloud Women Mentorship Program</em>, and hold an <em>MSc in Software Design with Artificial Intelligence</em>.
+        <a href="https://www.linkedin.com/company/aws-she-builds-mentorship-program/" target="_blank" rel="noopener"><em>AWS Cloud Women Mentorship Program</em></a>,
+        and hold an <em>MSc in Software Design with Artificial Intelligence</em>.
       </p>
     </div>
   </section>
