@@ -649,6 +649,46 @@
     }
     .footer-links a:hover { color: var(--accent); }
 
+    /* ─── PERSONAL BLOG PREVIEW ──────────────────────────── */
+    .blog-preview {
+      padding: clamp(4rem, 6vw, 6rem) var(--pad);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .blog-preview-inner {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: clamp(3rem, 5vw, 5rem);
+    }
+    .blog-preview-item {
+      padding: 1.35rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .blog-preview-item:first-child { border-top: 1px solid var(--border); }
+    .blog-preview-item a { text-decoration: none; display: block; }
+    .blog-preview-item a:hover .blog-preview-title { color: var(--accent); }
+    .blog-preview-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.35;
+      transition: color 0.2s;
+      margin-bottom: 0.3rem;
+    }
+    .blog-preview-desc {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+    .blog-preview-meta {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 0.35rem;
+      letter-spacing: 0.05em;
+    }
+
     /* ─── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 768px) {
       .hero {
@@ -659,7 +699,8 @@
       .about,
       .expertise-inner,
       .speaking,
-      .writing-inner {
+      .writing-inner,
+      .blog-preview-inner {
         grid-template-columns: 1fr;
         gap: 1.75rem;
       }
@@ -687,6 +728,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#speaking">Speaking</a></li>
         <li><a href="#writing">Writing</a></li>
+        <li><a href="/blog/">Blog</a></li>
         <li><a href="#connect">Connect</a></li>
       </ul>
     </div>
@@ -993,6 +1035,34 @@
         <div class="writing-view-all reveal">
           <a href="https://www.linkedin.com/in/henriquessantana/" target="_blank" rel="noopener">
             Follow on LinkedIn to get notified of new posts
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- ── PERSONAL BLOG ─────────────────────────────────────────── -->
+  <section id="blog" class="blog-preview" aria-labelledby="blog-heading">
+    <div class="blog-preview-inner">
+      <div>
+        <span class="label reveal" id="blog-heading">Personal Blog</span>
+      </div>
+      <div>
+
+        <!-- ✏️ LATEST POSTS: keep 3-5 entries here, newest first.
+             Updated automatically by the blog-writer scheduled task. -->
+
+        <p class="reveal" style="font-size: 0.9rem; color: var(--muted); padding: 2rem 0;">
+          First post coming soon.
+        </p>
+
+        <div class="writing-view-all reveal">
+          <a href="/blog/">
+            View all posts
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>

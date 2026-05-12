@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Henrique Santana</title>
+  <meta name="description" content="Personal notes on AI-assisted development, workflow design, and engineering productivity.">
+
+  <link rel="canonical" href="https://henriquesantana.work/blog/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://henriquesantana.work/blog/">
+  <meta property="og:title" content="Blog — Henrique Santana">
+  <meta property="og:description" content="Personal notes on AI-assisted development, workflow design, and engineering productivity.">
+  <meta property="og:image" content="https://henriquesantana.work/assets/images/profile.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blog — Henrique Santana">
+  <meta name="twitter:description" content="Personal notes on AI-assisted development, workflow design, and engineering productivity.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F2EC'/%3E%3Crect x='0.5' y='0.5' width='31' height='31' fill='none' stroke='%23B07D3A' stroke-width='1'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-style='italic' fill='%231A1814' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- Blog styles -->
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGQ6160NZG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PGQ6160NZG');
+  </script>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Henrique Santana</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ───────────────────────────────────────────── -->
+  <header class="blog-header">
+    <h1 class="reveal">Personal Blog</h1>
+    <p class="reveal reveal-delay-1">Notes on AI-assisted development, workflow patterns, and what I'm learning along the way.</p>
+  </header>
+
+  <!-- ── POST LIST ────────────────────────────────────────── -->
+  <section class="blog-list" aria-label="Blog posts">
+
+    <!-- ✏️ TO ADD A NEW POST: copy a blog-post-item block and paste it at the top.
+         Update: href, date, reading time, title, and description. -->
+
+    <p class="reveal" style="color: var(--muted); font-size: 0.95rem; padding: 3rem 0; text-align: center; border-top: 1px solid var(--border);">
+      First post coming soon.
+    </p>
+
+  </section>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <strong>Henrique Santana</strong> · Principal Cloud Support Engineer, AWS
+      </p>
+    </div>
+  </footer>
+
+  <!-- ── SCROLL REVEAL ────────────────────────────────────── -->
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>
