@@ -1,0 +1,21 @@
+# Henrique Santana
+
+> Principal Cloud Support Engineer at AWS. Containers, Kubernetes, AI/ML infrastructure. KubeCon and re:Invent speaker. Co-founder of Cloud Native Dublin.
+
+## About
+
+Personal website and blog of Henrique Santana, covering AI-assisted development workflows, cloud architecture, and container orchestration.
+
+## Blog Posts
+
+- [Skills, Not Prompts](https://henriquesantana.work/blog/skills-not-prompts.html): Why skill-based workflows replaced free-prompting for all my active projects.
+- [SEO Now Has Two Audiences](https://henriquesantana.work/blog/seo-for-ai-agents.html): Your website has two types of visitors now: humans and AI agents. Most sites are only optimized for one.
+
+## Links
+
+- [Homepage](https://henriquesantana.work/)
+- [Blog](https://henriquesantana.work/blog/)
+- [RSS Feed](https://henriquesantana.work/blog/feed.xml)
+- [LinkedIn](https://www.linkedin.com/in/henriquessantana/)
+- [GitHub](https://github.com/henriquesantanati)
+- [Speaker Profile](https://sessionize.com/henrique-santana/)
