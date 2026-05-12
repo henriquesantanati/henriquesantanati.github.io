@@ -5,12 +5,30 @@
   <link href="https://henriquesantana.work/blog/" rel="alternate" type="text/html"/>
   <link href="https://henriquesantana.work/blog/feed.xml" rel="self" type="application/atom+xml"/>
   <id>https://henriquesantana.work/blog/</id>
-  <updated>2026-05-12T00:00:00Z</updated>
+  <updated>2026-05-12T08:00:00Z</updated>
   <author>
     <name>Henrique Santana</name>
     <uri>https://henriquesantana.work/</uri>
   </author>
 
   <!-- ✏️ NEW ENTRIES GO HERE (newest first) -->
+
+  <entry>
+    <title>Skills, Not Prompts</title>
+    <link href="https://henriquesantana.work/blog/skills-not-prompts.html" rel="alternate" type="text/html"/>
+    <id>https://henriquesantana.work/blog/skills-not-prompts.html</id>
+    <published>2026-05-12T08:00:00Z</published>
+    <updated>2026-05-12T08:00:00Z</updated>
+    <summary>I stopped writing long prompts months ago. Everything I do with AI is skill-based now, and the difference in consistency and speed is enormous.</summary>
+  </entry>
+
+  <entry>
+    <title>SEO Now Has Two Audiences</title>
+    <link href="https://henriquesantana.work/blog/seo-for-ai-agents.html" rel="alternate" type="text/html"/>
+    <id>https://henriquesantana.work/blog/seo-for-ai-agents.html</id>
+    <published>2026-05-12T08:00:00Z</published>
+    <updated>2026-05-12T08:00:00Z</updated>
+    <summary>Your website has two types of visitors now: humans and AI agents. Most sites are only optimized for one of them.</summary>
+  </entry>
 
 </feed>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills, Not Prompts | Henrique Santana</title>
+  <meta name="description" content="I stopped writing long prompts months ago. Everything I do with AI is skill-based now, and the difference in consistency and speed is enormous.">
+
+  <link rel="canonical" href="https://henriquesantana.work/blog/skills-not-prompts.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://henriquesantana.work/blog/skills-not-prompts.html">
+  <meta property="og:title" content="Skills, Not Prompts — Henrique Santana">
+  <meta property="og:description" content="I stopped writing long prompts months ago. Everything I do with AI is skill-based now, and the difference in consistency and speed is enormous.">
+  <meta property="og:image" content="https://henriquesantana.work/assets/images/profile.jpg">
+  <meta property="article:published_time" content="2026-05-12">
+  <meta property="article:author" content="Henrique Santana">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Skills, Not Prompts — Henrique Santana">
+  <meta name="twitter:description" content="I stopped writing long prompts months ago. Everything I do with AI is skill-based now, and the difference in consistency and speed is enormous.">
+  <meta name="twitter:image" content="https://henriquesantana.work/assets/images/profile.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F2EC'/%3E%3Crect x='0.5' y='0.5' width='31' height='31' fill='none' stroke='%23B07D3A' stroke-width='1'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-style='italic' fill='%231A1814' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- Blog styles -->
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGQ6160NZG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PGQ6160NZG');
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Skills, Not Prompts",
+    "description": "I stopped writing long prompts months ago. Everything I do with AI is skill-based now, and the difference in consistency and speed is enormous.",
+    "datePublished": "2026-05-12",
+    "author": {
+      "@type": "Person",
+      "name": "Henrique Santana",
+      "url": "https://henriquesantana.work/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Henrique Santana"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://henriquesantana.work/blog/skills-not-prompts.html"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Henrique Santana</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── ARTICLE HEADER ───────────────────────────────────── -->
+  <header class="article-header">
+    <a href="/blog/" class="back-link reveal">← All posts</a>
+    <h1 class="reveal reveal-delay-1">Skills, Not Prompts</h1>
+    <div class="article-meta reveal reveal-delay-2">
+      <time datetime="2026-05-12">May 12, 2026</time>
+      <span>5 min read</span>
+    </div>
+  </header>
+
+  <!-- ── ARTICLE BODY ─────────────────────────────────────── -->
+  <article class="article-body reveal reveal-delay-3">
+
+    <p>I run over a dozen active projects with an AI coding agent. Content pipelines, automation tools, web applications, documentation workflows. Every single one of them is skill-based. I have not written a long prompt from scratch in months.</p>
+
+    <p>That sounds extreme, so let me clarify what I mean. I still prompt. I type things to the agent constantly. But <strong>I only free-prompt when I'm genuinely exploring new territory</strong>: discussing a brand new idea, brainstorming something I've never done before, or having a back-and-forth conversation about direction. The moment a workflow solidifies, the moment I notice I'm repeating instructions, it becomes a skill.</p>
+
+    <h2>What a skill actually is</h2>
+
+    <p>A skill is a markdown file. In <a href="https://docs.anthropic.com/en/docs/claude-code/memory">Claude Code</a> these live as CLAUDE.md or dedicated skill files. In <a href="https://docs.cursor.com/context/rules">Cursor</a> they're rules. In <a href="https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot">Copilot</a> they're instruction files. The name varies but the concept is identical: a file that contains instructions, conventions, guardrails, and context that the agent loads before executing a task. Think of it as the difference between training a new hire every morning versus having an employee who already knows the job and just needs today's assignment.</p>
+
+    <p>Mine typically include: what the workflow does, the exact steps in order, quality standards (what's acceptable and what gets rejected), file paths and conventions, and lessons learned from past failures. Some are 50 lines. Some are 300. The length depends on complexity, not ceremony.</p>
+
+    <h2>Why this works better than prompting</h2>
+
+    <p>The most immediate difference is consistency. A prompt is a one-time instruction. You write it, it runs, and next time you need the same thing, you either remember what you said or you don't. A skill guarantees the same quality bar every run. My deployment skill knows the exact build steps, the environment variables, the validation checks to run before pushing. I never have to remember any of that. Whether I trigger it on Monday morning or Friday evening, the output meets the same standard.</p>
+
+    <p>But consistency is just the starting point. What really compounds is that every failure becomes a permanent fix. Every time something goes wrong, I add the correction to the skill. Yesterday's bug becomes tomorrow's guardrail. One of my skills has over twenty rules that each came from a specific failure I debugged and resolved. None of those rules are obvious upfront. They only emerged through real usage, and now they prevent the same mistakes permanently. No prompt can replicate months of accumulated operational knowledge in a single conversation window.</p>
+
+    <p>Speed follows naturally. When I trigger a skill, the agent already knows everything: the tools, the configuration, the output format, the folder structure, the quality checks. No preamble needed. The cognitive load shifts from "remember and instruct" to "decide and trigger." I spend my energy on what to do next, not on explaining how to do what I already figured out last month.</p>
+
+    <p>And then there's delegation. Skills make scheduled automation possible. I have tasks that fire on a cron schedule (generating reports, drafting content, monitoring feeds) and they work because the skill file gives the agent everything it needs without me being present. You can't schedule a prompt. You can schedule a skill. This is the difference between an assistant that only works when you're in the room and one that runs your operations while you sleep.</p>
+
+    <h2>When I still prompt</h2>
+
+    <p>Free prompting is for discovery. When I'm starting a new project and don't know the shape yet. When I'm discussing architecture and want to think out loud. When I'm asking a question I've never asked before. These conversations often produce the raw material that later becomes a skill. I notice the patterns, extract the reusable parts, and codify them.</p>
+
+    <p>The ratio in my workflow is roughly 80% skill-triggered, 20% free conversation. That 20% is where new ideas come from. The 80% is where actual output happens.</p>
+
+    <h2>The shift in thinking</h2>
+
+    <p>Most people using AI coding agents are still in "prompt mode." They treat every interaction as a blank page. This works for simple tasks, but it falls apart at scale. If you have three active projects, you can prompt your way through. If you have ten or fifteen, you can't hold all the context in your head and re-explain it each time.</p>
+
+    <p>The mental model shift is: <strong>stop thinking of the agent as someone you talk to, and start thinking of it as someone who works for you and has a job description.</strong> The skill is the job description. Your prompts become the daily standup: short, contextual, focused on what's new today.</p>
+
+    <p>I've watched my throughput go from "one or two meaningful outputs per session" to "five or six, across different projects, in the same sitting." The bottleneck moved from instruction to decision-making, which is where it should be.</p>
+
+    <p>If you're using any of these tools, you already have the infrastructure for this. The question is whether you're using it as a convenience or as the foundation of how you work.</p>
+
+  </article>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <strong>Henrique Santana</strong> · Principal Cloud Support Engineer, AWS
+      </p>
+    </div>
+  </footer>
+
+  <!-- ── SCROLL REVEAL ────────────────────────────────────── -->
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Now Has Two Audiences | Henrique Santana</title>
+  <meta name="description" content="Your website has two types of visitors now: humans and AI agents. Most sites are only optimized for one of them.">
+
+  <link rel="canonical" href="https://henriquesantana.work/blog/seo-for-ai-agents.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://henriquesantana.work/blog/seo-for-ai-agents.html">
+  <meta property="og:title" content="SEO Now Has Two Audiences — Henrique Santana">
+  <meta property="og:description" content="Your website has two types of visitors now: humans and AI agents. Most sites are only optimized for one of them.">
+  <meta property="og:image" content="https://henriquesantana.work/assets/images/profile.jpg">
+  <meta property="article:published_time" content="2026-05-12">
+  <meta property="article:author" content="Henrique Santana">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SEO Now Has Two Audiences — Henrique Santana">
+  <meta name="twitter:description" content="Your website has two types of visitors now: humans and AI agents. Most sites are only optimized for one of them.">
+  <meta name="twitter:image" content="https://henriquesantana.work/assets/images/profile.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F2EC'/%3E%3Crect x='0.5' y='0.5' width='31' height='31' fill='none' stroke='%23B07D3A' stroke-width='1'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-style='italic' fill='%231A1814' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- Blog styles -->
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGQ6160NZG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PGQ6160NZG');
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "SEO Now Has Two Audiences",
+    "description": "Your website has two types of visitors now: humans and AI agents. Most sites are only optimized for one of them.",
+    "datePublished": "2026-05-12",
+    "author": {
+      "@type": "Person",
+      "name": "Henrique Santana",
+      "url": "https://henriquesantana.work/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Henrique Santana"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://henriquesantana.work/blog/seo-for-ai-agents.html"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Henrique Santana</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── ARTICLE HEADER ───────────────────────────────────── -->
+  <header class="article-header">
+    <a href="/blog/" class="back-link reveal">← All posts</a>
+    <h1 class="reveal reveal-delay-1">SEO Now Has Two Audiences</h1>
+    <div class="article-meta reveal reveal-delay-2">
+      <time datetime="2026-05-12">May 12, 2026</time>
+      <span>5 min read</span>
+    </div>
+  </header>
+
+  <!-- ── ARTICLE BODY ─────────────────────────────────────── -->
+  <article class="article-body reveal reveal-delay-3">
+
+    <p>Your website has two types of visitors now: humans using browsers, and AI agents fetching content to answer questions. Most sites are only optimized for one of them. The ones that figure out both will dominate visibility in the next two years.</p>
+
+    <p>This is not speculation. Right now, ChatGPT-User, Claude-User, PerplexityBot, and Gemini-Deep-Research are visiting web pages the moment someone asks a question. They fetch your content in real-time, parse it, and decide whether to cite you in their answer. If your site is not readable by these agents, you do not get cited. Someone else does. Your traditional SEO ranking becomes irrelevant if the AI never surfaces your content in its response.</p>
+
+    <h2>The /llms.txt standard</h2>
+
+    <p>There is a <a href="https://llmstxt.org/">proposed standard called /llms.txt</a> that addresses this directly. The idea is straightforward: you place a markdown file at the root of your domain that maps your site for AI models. It tells them what you are, what you offer, and provides links to clean markdown versions of your key pages. Think of it as <code>robots.txt</code> for comprehension rather than access control.</p>
+
+    <p>Where <code>robots.txt</code> says "you may or may not crawl these paths," <code>llms.txt</code> says "here is how to understand what this site is about, and here are the pages that matter most, in a format you can actually parse." The distinction matters because AI agents have limited context windows. They cannot process your entire site. They need a guided entry point, and <code>llms.txt</code> gives them one.</p>
+
+    <p>I added one to my own site. It took ten minutes. The file is plain markdown: a title, a brief description, and a list of URLs pointing to the content I want AI agents to find first. No build tooling, no framework, no dependencies. If your site has a dozen important pages, your <code>llms.txt</code> is probably fifteen lines long. The barrier to entry is essentially zero, which makes the number of sites that still do not have one surprising.</p>
+
+    <h2>Clean content wins</h2>
+
+    <p>Beyond <code>llms.txt</code>, the sites that get cited by AI agents share a common trait: their content is clean and parseable. AI assistants struggle with JavaScript-heavy single-page applications, cookie consent walls, and navigation-cluttered HTML. They perform best with pages that have clear, direct answers early in the content. Structure and semantic HTML matter more than keyword density ever did.</p>
+
+    <p>This is good news for anyone who cares about writing quality. The same things that make content good for human readers (clear structure, direct answers, minimal noise) are exactly what makes content good for AI agents. The sites being cited are not the ones gaming keywords. They are the ones with genuinely useful, well-organized information. If you have been writing clearly and structuring your pages with semantic HTML all along, you are already ahead of most of the web.</p>
+
+    <h2>Two types of bots, two different decisions</h2>
+
+    <p>Not all AI bots are doing the same thing, and understanding the difference changes how you handle them. Training crawlers like GPTBot and CCBot download your content to use in model training. You can block them via <code>robots.txt</code> if you do not want your content baked into future model weights. That is a legitimate choice, and many publishers are making it.</p>
+
+    <p>But AI Assistants (ChatGPT-User, Claude-User, PerplexityBot) are different. They fetch pages in real-time, in response to a specific user query, to generate an answer right now. Blocking these means your content never appears in AI-generated answers, even if your Google ranking is perfect. You become invisible to an increasingly large segment of how people find information.</p>
+
+    <p>The decision is not binary. You can block training crawlers while allowing assistant bots. You can serve different content quality to each. But you need to make this decision consciously rather than inheriting a default <code>robots.txt</code> that was written before AI assistants existed. Most sites I see have not updated their <code>robots.txt</code> in years. They are making a choice by not making a choice, and that default is increasingly costly.</p>
+
+    <h2>The new question</h2>
+
+    <p>SEO used to be about one thing: do I rank on page one? Now there is a second question that matters just as much: am I the source the AI cites when it answers? These are different problems with different solutions. Traditional SEO optimizes for Google's ranking algorithm. AI visibility optimizes for parseability, clarity, and being the most useful source an agent can find quickly.</p>
+
+    <p>Both audiences want the same fundamental thing: clear, authoritative, well-structured content. The difference is that AI agents are less forgiving of noise. They will not scroll past your cookie banner or wait for your JavaScript to render. They will not infer meaning from your elaborate navigation structure. They will move on to the next source that gives them a clean answer in the first few hundred tokens. If that source is your competitor, the AI cites your competitor. Permanently.</p>
+
+  </article>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <strong>Henrique Santana</strong> · Principal Cloud Support Engineer, AWS
+      </p>
+    </div>
+  </footer>
+
+  <!-- ── SCROLL REVEAL ────────────────────────────────────── -->
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>
