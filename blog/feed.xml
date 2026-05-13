@@ -5,13 +5,22 @@
   <link href="https://henriquesantana.work/blog/" rel="alternate" type="text/html"/>
   <link href="https://henriquesantana.work/blog/feed.xml" rel="self" type="application/atom+xml"/>
   <id>https://henriquesantana.work/blog/</id>
-  <updated>2026-05-12T08:00:00Z</updated>
+  <updated>2026-05-13T08:00:00Z</updated>
   <author>
     <name>Henrique Santana</name>
     <uri>https://henriquesantana.work/</uri>
   </author>
 
   <!-- ✏️ NEW ENTRIES GO HERE (newest first) -->
+
+  <entry>
+    <title>I Built a Tool to Score My LinkedIn Profile</title>
+    <link href="https://henriquesantana.work/blog/linkedin-profile-score.html" rel="alternate" type="text/html"/>
+    <id>https://henriquesantana.work/blog/linkedin-profile-score.html</id>
+    <published>2026-05-13T08:00:00Z</published>
+    <updated>2026-05-13T08:00:00Z</updated>
+    <summary>I turned a recruiter's profile optimization guide into a scoring tool that reads your LinkedIn data export and tells you exactly what to fix.</summary>
+  </entry>
 
   <entry>
     <title>Skills, Not Prompts</title>

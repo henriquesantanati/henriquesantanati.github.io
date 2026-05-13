@@ -8,6 +8,7 @@ Personal website and blog of Henrique Santana, covering AI-assisted development 
 
 ## Blog Posts
 
+- [I Built a Tool to Score My LinkedIn Profile](https://henriquesantana.work/blog/linkedin-profile-score.html): I turned a recruiter's profile optimization guide into a scoring tool that reads your LinkedIn data export and tells you exactly what to fix.
 - [Skills, Not Prompts](https://henriquesantana.work/blog/skills-not-prompts.html): Why skill-based workflows replaced free-prompting for all my active projects.
 - [SEO Now Has Two Audiences](https://henriquesantana.work/blog/seo-for-ai-agents.html): Your website has two types of visitors now: humans and AI agents. Most sites are only optimized for one.
 
