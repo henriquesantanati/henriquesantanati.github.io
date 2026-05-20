@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Catches Errors It Just Made | Henrique Santana</title>
+  <meta name="description" content="The same model that fabricates a date will flag that date as wrong five minutes later. AI is a dramatically better verifier than generator, and most people only use it as a generator.">
+
+  <link rel="canonical" href="https://henriquesantana.work/blog/ai-catches-its-own-lies.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://henriquesantana.work/blog/ai-catches-its-own-lies.html">
+  <meta property="og:title" content="AI Catches Errors It Just Made — Henrique Santana">
+  <meta property="og:description" content="The same model that fabricates a date will flag that date as wrong five minutes later. AI is a dramatically better verifier than generator, and most people only use it as a generator.">
+  <meta property="og:image" content="https://henriquesantana.work/assets/images/profile.jpg">
+  <meta property="article:published_time" content="2026-05-20">
+  <meta property="article:author" content="Henrique Santana">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Catches Errors It Just Made — Henrique Santana">
+  <meta name="twitter:description" content="The same model that fabricates a date will flag that date as wrong five minutes later. AI is a dramatically better verifier than generator, and most people only use it as a generator.">
+  <meta name="twitter:image" content="https://henriquesantana.work/assets/images/profile.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F2EC'/%3E%3Crect x='0.5' y='0.5' width='31' height='31' fill='none' stroke='%23B07D3A' stroke-width='1'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-style='italic' fill='%231A1814' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- Blog styles -->
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGQ6160NZG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PGQ6160NZG');
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "AI Catches Errors It Just Made",
+    "description": "The same model that fabricates a date will flag that date as wrong five minutes later. AI is a dramatically better verifier than generator, and most people only use it as a generator.",
+    "datePublished": "2026-05-20",
+    "author": {
+      "@type": "Person",
+      "name": "Henrique Santana",
+      "url": "https://henriquesantana.work/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Henrique Santana"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://henriquesantana.work/blog/ai-catches-its-own-lies.html"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Henrique Santana</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── ARTICLE HEADER ───────────────────────────────────── -->
+  <header class="article-header">
+    <a href="/blog/" class="back-link reveal">← All posts</a>
+    <h1 class="reveal reveal-delay-1">AI Catches Errors It Just Made</h1>
+    <div class="article-meta reveal reveal-delay-2">
+      <time datetime="2026-05-20">May 20, 2026</time>
+      <span>3 min read</span>
+    </div>
+  </header>
+
+  <!-- ── ARTICLE BODY ─────────────────────────────────────── -->
+  <article class="article-body reveal reveal-delay-3">
+
+    <p>At Amazon we write narratives instead of slide decks. Last week I asked an AI to help me draft a proposal, and it gave me a solid document with a specific claim about latency improvement from a migration. A concrete percentage. A precise mechanism explaining why the improvement would happen. Both wrong. The mechanism didn't apply to my architecture at all, and the percentage was invented from nothing.</p>
+
+    <p>I opened a fresh session, pasted the same document, and asked it to verify every claim. It caught the latency number in seconds. Explained exactly why the cited mechanism wouldn't produce that result. Suggested what the real bottleneck was. Same model. Same weights. Same afternoon. The knowledge to correct the claim was always there. The model just couldn't access it while it was busy generating.</p>
+
+    <p>Most people have this backwards. They trust AI's generated output and distrust its judgment. I do the opposite. I treat everything it generates as probably wrong in at least one specific way, and I use its judgment in a fresh session to find where. The generation is the cheap part, the scaffolding. The verification is where the model actually earns its keep.</p>
+
+    <p>The fabrications don't look like guesses. They look like facts. A model that isn't sure will still give you a specific IAM policy ARN, a concrete compression ratio, an exact library version. It doesn't signal uncertainty because it doesn't experience uncertainty. Every token arrives with the same confidence whether it's drawing on real training data or filling a gap with something plausible. The more specific a claim is, the more I've learned to distrust it. Specificity in generated text is decoration, not evidence.</p>
+
+    <p>For days I verified in the same session. I'd generate something, then ask "is this correct?" in the same conversation. Useless. The model won't contradict itself in context. It has too much inertia toward its own output. It'll find you a typo, maybe suggest a rewording, but it won't say "that number I gave you two messages ago was fabricated." It doesn't work that way. You need a session that has never seen the output, one that encounters the text cold and has no loyalty to it.</p>
+
+    <p>I don't use AI to be right on the first pass anymore. I use it to be wrong fast, then catch itself. Generate, then spawn a separate critic agent whose only job is to take each claim and verify it against the original source. The model that made the mistake is the same model that finds it. I just need to put it in a different chair.</p>
+
+  </article>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <strong>Henrique Santana</strong> · Principal Cloud Support Engineer, AWS
+      </p>
+    </div>
+  </footer>
+
+  <!-- ── SCROLL REVEAL ────────────────────────────────────── -->
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>

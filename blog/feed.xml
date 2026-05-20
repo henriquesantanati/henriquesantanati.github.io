@@ -5,13 +5,22 @@
   <link href="https://henriquesantana.work/blog/" rel="alternate" type="text/html"/>
   <link href="https://henriquesantana.work/blog/feed.xml" rel="self" type="application/atom+xml"/>
   <id>https://henriquesantana.work/blog/</id>
-  <updated>2026-05-13T08:00:00Z</updated>
+  <updated>2026-05-20T08:00:00Z</updated>
   <author>
     <name>Henrique Santana</name>
     <uri>https://henriquesantana.work/</uri>
   </author>
 
   <!-- ✏️ NEW ENTRIES GO HERE (newest first) -->
+
+  <entry>
+    <title>AI Catches Errors It Just Made</title>
+    <link href="https://henriquesantana.work/blog/ai-catches-its-own-lies.html" rel="alternate" type="text/html"/>
+    <id>https://henriquesantana.work/blog/ai-catches-its-own-lies.html</id>
+    <published>2026-05-20T08:00:00Z</published>
+    <updated>2026-05-20T08:00:00Z</updated>
+    <summary>The same model that fabricates a claim will flag it as wrong five minutes later in a fresh session. I use that asymmetry as my primary workflow now.</summary>
+  </entry>
 
   <entry>
     <title>I Built a Tool to Score My LinkedIn Profile</title>

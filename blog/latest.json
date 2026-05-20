@@ -1,8 +1,7 @@
 {
-  "title": "I Built a Tool to Score My LinkedIn Profile",
-  "slug": "linkedin-profile-score",
-  "url": "https://henriquesantana.work/blog/linkedin-profile-score.html",
-  "description": "I turned a recruiter's profile optimization guide into a scoring tool that reads your LinkedIn data export and tells you exactly what to fix.",
-  "date": "2026-05-13",
-  "readingTime": "4 min read"
+  "title": "AI Catches Errors It Just Made",
+  "slug": "ai-catches-its-own-lies",
+  "url": "https://henriquesantana.work/blog/ai-catches-its-own-lies.html",
+  "date": "2026-05-20",
+  "description": "The same model that fabricates a claim will flag it as wrong five minutes later in a fresh session. I use that asymmetry as my primary workflow now."
 }
