@@ -5,13 +5,22 @@
   <link href="https://henriquesantana.work/blog/" rel="alternate" type="text/html"/>
   <link href="https://henriquesantana.work/blog/feed.xml" rel="self" type="application/atom+xml"/>
   <id>https://henriquesantana.work/blog/</id>
-  <updated>2026-05-20T08:00:00Z</updated>
+  <updated>2026-06-03T08:00:00Z</updated>
   <author>
     <name>Henrique Santana</name>
     <uri>https://henriquesantana.work/</uri>
   </author>
 
   <!-- ✏️ NEW ENTRIES GO HERE (newest first) -->
+
+  <entry>
+    <title>One Agent Per Dimension</title>
+    <link href="https://henriquesantana.work/blog/one-agent-per-dimension.html" rel="alternate" type="text/html"/>
+    <id>https://henriquesantana.work/blog/one-agent-per-dimension.html</id>
+    <published>2026-06-03T08:00:00Z</published>
+    <updated>2026-06-03T08:00:00Z</updated>
+    <summary>I stopped asking one AI to review everything at once. Six focused agents, each checking a single dimension, produce sharper feedback in a third of the time.</summary>
+  </entry>
 
   <entry>
     <title>AI Catches Errors It Just Made</title>

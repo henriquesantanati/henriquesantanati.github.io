@@ -1,7 +1,7 @@
 {
-  "title": "AI Catches Errors It Just Made",
-  "slug": "ai-catches-its-own-lies",
-  "url": "https://henriquesantana.work/blog/ai-catches-its-own-lies.html",
-  "date": "2026-05-20",
-  "description": "The same model that fabricates a claim will flag it as wrong five minutes later in a fresh session. I use that asymmetry as my primary workflow now."
+  "title": "One Agent Per Dimension",
+  "slug": "one-agent-per-dimension",
+  "url": "https://henriquesantana.work/blog/one-agent-per-dimension.html",
+  "date": "2026-06-03",
+  "description": "I stopped asking one AI to review everything at once. Six focused agents, each checking a single dimension, produce sharper feedback in a third of the time."
 }

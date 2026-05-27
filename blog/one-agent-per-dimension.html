@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Agent Per Dimension | Henrique Santana</title>
+  <meta name="description" content="I stopped asking one AI to review everything at once. Six focused agents, each checking a single dimension, produce sharper feedback in a third of the time.">
+
+  <link rel="canonical" href="https://henriquesantana.work/blog/one-agent-per-dimension.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://henriquesantana.work/blog/one-agent-per-dimension.html">
+  <meta property="og:title" content="One Agent Per Dimension — Henrique Santana">
+  <meta property="og:description" content="I stopped asking one AI to review everything at once. Six focused agents, each checking a single dimension, produce sharper feedback in a third of the time.">
+  <meta property="og:image" content="https://henriquesantana.work/assets/images/profile.jpg">
+  <meta property="article:published_time" content="2026-06-03">
+  <meta property="article:author" content="Henrique Santana">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="One Agent Per Dimension — Henrique Santana">
+  <meta name="twitter:description" content="I stopped asking one AI to review everything at once. Six focused agents, each checking a single dimension, produce sharper feedback in a third of the time.">
+  <meta name="twitter:image" content="https://henriquesantana.work/assets/images/profile.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F2EC'/%3E%3Crect x='0.5' y='0.5' width='31' height='31' fill='none' stroke='%23B07D3A' stroke-width='1'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-style='italic' fill='%231A1814' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- Blog styles -->
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGQ6160NZG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PGQ6160NZG');
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "One Agent Per Dimension",
+    "description": "I stopped asking one AI to review everything at once. Six focused agents, each checking a single dimension, produce sharper feedback in a third of the time.",
+    "datePublished": "2026-06-03",
+    "author": {
+      "@type": "Person",
+      "name": "Henrique Santana",
+      "url": "https://henriquesantana.work/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Henrique Santana"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://henriquesantana.work/blog/one-agent-per-dimension.html"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Henrique Santana</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── ARTICLE HEADER ───────────────────────────────────── -->
+  <header class="article-header">
+    <a href="/blog/" class="back-link reveal">← All posts</a>
+    <h1 class="reveal reveal-delay-1">One Agent Per Dimension</h1>
+    <div class="article-meta reveal reveal-delay-2">
+      <time datetime="2026-06-03">June 3, 2026</time>
+      <span>3 min read</span>
+    </div>
+  </header>
+
+  <!-- ── ARTICLE BODY ─────────────────────────────────────── -->
+  <article class="article-body reveal reveal-delay-3">
+
+    <p>For weeks I asked a single AI session to review my work across every dimension at once. "Check the factual accuracy, the writing style, the technical correctness, the source quality, and the structure." It would return a list of issues that felt comprehensive but wasn't. It would find three style problems, mention one factual concern, and miss the structural issue entirely. Reasonable-looking output that gave me false confidence the review was thorough.</p>
+
+    <p>Instead of one reviewer handling six dimensions, I spawned six separate agents, each scoped to a single concern. Each agent gets the same input text but a narrow prompt: your only job is this one dimension.</p>
+
+    <p>The quality difference was immediate. The factual accuracy agent caught claims the generalist reviewer had missed because it wasn't distracted by style suggestions. The structure agent identified a pacing problem in the middle section that the generalist had glossed over while noting a typo.</p>
+
+    <p>The speed improvement surprised me more than the quality improvement. Six parallel agents finish in roughly the time it takes one agent to complete. That took my review cycle from about seven minutes down to two.</p>
+
+    <p>When I get six independent verdicts, disagreements become visible. The structure agent says a section should be cut. The factual accuracy agent references that same section as containing important evidence. That's a genuine tension to resolve, and one the generalist reviewer would have papered over with its own implicit prioritization.</p>
+
+    <p>I've applied this to code review too. Instead of "review this PR for issues," I spawn separate agents for security, performance, API design, error handling, and test coverage. The security agent just asks: can this be exploited? Where does untrusted input flow? It finds things a generalist reviewer never surfaces because it's not simultaneously evaluating naming conventions.</p>
+
+    <p>The tradeoff is coordination. Six agents produce six reports, and sometimes they contradict each other. I still need to synthesize their findings and make the final call. But that's a better problem to have than a single reviewer that gives me shallow coverage across everything and deep coverage of nothing. I'd rather reconcile six focused opinions than trust one diluted one.</p>
+
+  </article>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <strong>Henrique Santana</strong> · Principal Cloud Support Engineer, AWS
+      </p>
+    </div>
+  </footer>
+
+  <!-- ── SCROLL REVEAL ────────────────────────────────────── -->
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -8,6 +8,7 @@ Personal website and blog of Henrique Santana, covering AI-assisted development 
 
 ## Blog Posts
 
+- [One Agent Per Dimension](https://henriquesantana.work/blog/one-agent-per-dimension.html): Six focused agents each checking a single dimension produce sharper feedback than one generalist reviewer, and run in parallel.
 - [AI Catches Errors It Just Made](https://henriquesantana.work/blog/ai-catches-its-own-lies.html): The same model that fabricates a claim will flag it as wrong in a fresh session. I use that asymmetry as my primary workflow now.
 - [I Built a Tool to Score My LinkedIn Profile](https://henriquesantana.work/blog/linkedin-profile-score.html): I turned a recruiter's profile optimization guide into a scoring tool that reads your LinkedIn data export and tells you exactly what to fix.
 - [Skills, Not Prompts](https://henriquesantana.work/blog/skills-not-prompts.html): Why skill-based workflows replaced free-prompting for all my active projects.
