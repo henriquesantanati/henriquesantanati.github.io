@@ -133,6 +133,20 @@ nav {
   line-height: 1.8;
 }
 
+.blog-rss {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.blog-rss:hover { color: var(--accent-lt); }
+.blog-rss svg { flex-shrink: 0; }
+
 .blog-list {
   max-width: var(--max-w);
   margin: 0 auto;
