@@ -361,6 +361,19 @@ footer {
 }
 .footer-copy strong { color: var(--text-mid); font-weight: 500; }
 
+.footer-rss {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-rss:hover { color: var(--accent-lt); }
+.footer-rss svg { flex-shrink: 0; }
+
 /* ─── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .blog-post-title { font-size: 1.2rem; }
