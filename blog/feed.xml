@@ -5,13 +5,22 @@
   <link href="https://henriquesantana.work/blog/" rel="alternate" type="text/html"/>
   <link href="https://henriquesantana.work/blog/feed.xml" rel="self" type="application/atom+xml"/>
   <id>https://henriquesantana.work/blog/</id>
-  <updated>2026-05-27T08:00:00Z</updated>
+  <updated>2026-06-03T08:00:00Z</updated>
   <author>
     <name>Henrique Santana</name>
     <uri>https://henriquesantana.work/</uri>
   </author>
 
   <!-- ✏️ NEW ENTRIES GO HERE (newest first) -->
+
+  <entry>
+    <title>Your AI Agent Is a New Hire</title>
+    <link href="https://henriquesantana.work/blog/agents-need-guardrails.html" rel="alternate" type="text/html"/>
+    <id>https://henriquesantana.work/blog/agents-need-guardrails.html</id>
+    <published>2026-06-03T08:00:00Z</published>
+    <updated>2026-06-03T08:00:00Z</updated>
+    <summary>People are wiring AI agents into production with permissions no human would get on day one. The fix isn't clever prompting. It's the same boring guardrails we use for new hires.</summary>
+  </entry>
 
   <entry>
     <title>One Agent Per Dimension</title>

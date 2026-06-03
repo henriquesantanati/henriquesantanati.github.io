@@ -8,6 +8,7 @@ Personal website and blog of Henrique Santana, covering AI-assisted development 
 
 ## Blog Posts
 
+- [Your AI Agent Is a New Hire](https://henriquesantana.work/blog/agents-need-guardrails.html): An AI agent with API access and a deploy key is a new hire with no judgment and infinite confidence. The fix is the same boring guardrails we apply to humans.
 - [One Agent Per Dimension](https://henriquesantana.work/blog/one-agent-per-dimension.html): Six focused agents each checking a single dimension produce sharper feedback than one generalist reviewer, and run in parallel.
 - [AI Catches Errors It Just Made](https://henriquesantana.work/blog/ai-catches-its-own-lies.html): The same model that fabricates a claim will flag it as wrong in a fresh session. I use that asymmetry as my primary workflow now.
 - [I Built a Tool to Score My LinkedIn Profile](https://henriquesantana.work/blog/linkedin-profile-score.html): I turned a recruiter's profile optimization guide into a scoring tool that reads your LinkedIn data export and tells you exactly what to fix.
