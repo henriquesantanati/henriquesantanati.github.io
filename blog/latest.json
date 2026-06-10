@@ -1,7 +1,7 @@
 {
-  "title": "Your AI Agent Is a New Hire",
-  "slug": "agents-need-guardrails",
-  "url": "https://henriquesantana.work/blog/agents-need-guardrails.html",
-  "date": "2026-06-03",
-  "description": "People are wiring AI agents into production with permissions no human would get on day one. The fix isn't clever prompting. It's the same boring guardrails we use for new hires."
+  "title": "Gates That Block, or None",
+  "slug": "gates-that-block-or-none",
+  "url": "https://henriquesantana.work/blog/gates-that-block-or-none.html",
+  "date": "2026-06-10",
+  "description": "Every quality check I add to an AI pipeline is either a hard gate that stops the output from shipping, or it does not exist. Warnings that let you proceed are noise within a week."
 }

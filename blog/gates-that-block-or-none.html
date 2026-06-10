@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gates That Block, or None | Henrique Santana</title>
+  <meta name="description" content="Every quality check I add to an AI pipeline is either a hard gate that stops the output from shipping, or it does not exist. Warnings that let you proceed are noise within a week.">
+
+  <link rel="canonical" href="https://henriquesantana.work/blog/gates-that-block-or-none.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://henriquesantana.work/blog/gates-that-block-or-none.html">
+  <meta property="og:title" content="Gates That Block, or None — Henrique Santana">
+  <meta property="og:description" content="Every quality check I add to an AI pipeline is either a hard gate that stops the output from shipping, or it does not exist. Warnings that let you proceed are noise within a week.">
+  <meta property="og:image" content="https://henriquesantana.work/assets/images/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Henrique Santana — henriquesantana.work">
+  <meta property="article:published_time" content="2026-06-10">
+  <meta property="article:author" content="Henrique Santana">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gates That Block, or None — Henrique Santana">
+  <meta name="twitter:description" content="Every quality check I add to an AI pipeline is either a hard gate that stops the output from shipping, or it does not exist. Warnings that let you proceed are noise within a week.">
+  <meta name="twitter:image" content="https://henriquesantana.work/assets/images/og-default.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F2EC'/%3E%3Crect x='0.5' y='0.5' width='31' height='31' fill='none' stroke='%23B07D3A' stroke-width='1'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-style='italic' fill='%231A1814' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- Blog styles -->
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGQ6160NZG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PGQ6160NZG');
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Gates That Block, or None",
+    "description": "Every quality check I add to an AI pipeline is either a hard gate that stops the output from shipping, or it does not exist. Warnings that let you proceed are noise within a week.",
+    "datePublished": "2026-06-10",
+    "author": {
+      "@type": "Person",
+      "name": "Henrique Santana",
+      "url": "https://henriquesantana.work/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Henrique Santana"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://henriquesantana.work/blog/gates-that-block-or-none.html"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Henrique Santana</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── ARTICLE HEADER ───────────────────────────────────── -->
+  <header class="article-header">
+    <a href="/blog/" class="back-link reveal">← All posts</a>
+    <h1 class="reveal reveal-delay-1">Gates That Block, or None</h1>
+    <div class="article-meta reveal reveal-delay-2">
+      <time datetime="2026-06-10">June 10, 2026</time>
+      <span>4 min read</span>
+    </div>
+  </header>
+
+  <!-- ── ARTICLE BODY ─────────────────────────────────────── -->
+  <article class="article-body">
+
+    <p>I used to add soft warnings to my AI pipelines. A check would run, find something questionable, print a yellow note, and let the output ship anyway. Within a week I was ignoring every one of them. The pipeline had checks. The checks changed nothing. I was building theater that made me feel responsible without making me actually responsible.</p>
+
+    <p>Now every quality check I add to an AI pipeline is binary. It either blocks the output from shipping, or I do not add the check at all. There is no middle state. A gate that lets you proceed with a warning is not a gate. It is decoration that trains you to stop reading warnings, and once you stop reading them you are in a worse position than having no checks at all, because you believe you have coverage while having none.</p>
+
+    <p>The reason this matters more for AI-generated output than for hand-written work is volume. A person producing one deliverable per day will notice a yellow advisory and might act on it. A pipeline producing a dozen outputs per day generates a dozen advisories, and nobody is going to read a wall of notes with the same attention every morning. What actually happens is that the first few warnings get investigated, then the list grows, then it becomes a backlog nobody owns, and then the next genuinely bad output sails through because the signal drowned in noise weeks ago. The only sustainable quality mechanism at that throughput is a gate that physically stops the bad output from reaching the next step. If the check fails, the pipeline halts, the fix becomes the only way forward, and the output does not ship broken while I convince myself I will get to it later.</p>
+
+    <p>A blocking gate is a script that exits nonzero and halts the pipeline. The check itself can be anything that matters enough to stop for. In my pipelines I have gates that look for a required pattern in the output, gates that confirm factual claims have a source. The specifics vary by what I am shipping. What does not vary is the contract. Fail means stop.</p>
+
+    <p>The temptation to build soft warnings comes from wanting coverage without friction. A hard gate means the pipeline stops, and stopping means I have to fix something before anything else moves. That feels expensive in the moment. It feels like the gate is in the way. But the alternative is shipping something broken and discovering it after the fact, which costs more every single time. I have never once looked at a gate that caught a real problem and thought it was not worth the interruption. I have regularly looked at warnings I scrolled past and wished they had stopped me. The friction of stopping is the point. It forces a decision at the exact moment when the decision is cheapest to make.</p>
+
+    <p>The hard question is what to do about checks that resist binary measurement. Tone is not naturally pass/fail. Factual accuracy has gradients. My answer is to force the binary anyway, even if the threshold is imperfect. A tone check that blocks anything scoring below a 6 out of 10 is better than a tone check that prints a number and ships regardless. Will it sometimes block output that was fine? Yes. Will I override it occasionally? Yes. Both of those costs are lower than the slow erosion that happens when every check is advisory. I would rather tune a threshold over time than train myself to ignore it.</p>
+
+    <p>The override itself matters. When a gate blocks output I judge to be acceptable despite failing the check, I override it with a deliberate, logged decision. That is different from a warning in one critical way. The override requires me to engage with the failure, decide this specific case is an exception, and record that I made that call. A warning requires nothing. It scrolls by. Nobody ever had to justify scrolling. The override mechanism keeps the gate credible while acknowledging that no automated check is perfect. The moment you remove the friction of stopping, you remove the reason the gate exists. Every gate I trust today has a short list of past overrides beside it, and that list is what proves the gate is doing work.</p>
+
+    <p>I build fewer checks than I used to. Each one has to earn its place by being worth stopping for. If a quality dimension is not important enough to halt the pipeline when it fails, it is not important enough to check, because a check I will not act on is a check that teaches me to ignore all the others.</p>
+
+  </article>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <strong>Henrique Santana</strong> · Principal Cloud Support Engineer, AWS
+      </p>
+    </div>
+  </footer>
+
+  <!-- ── SCROLL REVEAL ────────────────────────────────────── -->
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>
