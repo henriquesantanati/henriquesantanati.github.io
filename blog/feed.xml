@@ -5,13 +5,22 @@
   <link href="https://henriquesantana.work/blog/" rel="alternate" type="text/html"/>
   <link href="https://henriquesantana.work/blog/feed.xml" rel="self" type="application/atom+xml"/>
   <id>https://henriquesantana.work/blog/</id>
-  <updated>2026-06-10T08:00:00Z</updated>
+  <updated>2026-06-11T08:00:00Z</updated>
   <author>
     <name>Henrique Santana</name>
     <uri>https://henriquesantana.work/</uri>
   </author>
 
   <!-- ✏️ NEW ENTRIES GO HERE (newest first) -->
+
+  <entry>
+    <title>AI Made Me Faster, Not Better</title>
+    <link href="https://henriquesantana.work/blog/ai-made-me-faster-not-better.html" rel="alternate" type="text/html"/>
+    <id>https://henriquesantana.work/blog/ai-made-me-faster-not-better.html</id>
+    <published>2026-06-11T08:00:00Z</published>
+    <updated>2026-06-11T08:00:00Z</updated>
+    <summary>Hand the same AI assistant to two engineers and you get opposite results. The tool changes your speed, never your standard. The quality bar is set by the person using it, and that is still the hardest thing to build.</summary>
+  </entry>
 
   <entry>
     <title>Gates That Block, or None</title>
