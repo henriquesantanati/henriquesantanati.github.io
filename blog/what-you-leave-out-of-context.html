@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What You Leave Out of the Context Matters More | Henrique Santana</title>
+  <meta name="description" content="Most people think more context means better output. Past a threshold, the opposite is true. The skill is curation: choosing what to include, what order to put it in, and what to deliberately leave out.">
+
+  <link rel="canonical" href="https://henriquesantana.work/blog/what-you-leave-out-of-context.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://henriquesantana.work/blog/what-you-leave-out-of-context.html">
+  <meta property="og:title" content="What You Leave Out of the Context Matters More — Henrique Santana">
+  <meta property="og:description" content="Most people think more context means better output. Past a threshold, the opposite is true. The skill is curation: choosing what to include, what order to put it in, and what to deliberately leave out.">
+  <meta property="og:image" content="https://henriquesantana.work/assets/images/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Henrique Santana — henriquesantana.work">
+  <meta property="article:published_time" content="2026-06-17">
+  <meta property="article:author" content="Henrique Santana">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What You Leave Out of the Context Matters More — Henrique Santana">
+  <meta name="twitter:description" content="Most people think more context means better output. Past a threshold, the opposite is true. The skill is curation: choosing what to include, what order to put it in, and what to deliberately leave out.">
+  <meta name="twitter:image" content="https://henriquesantana.work/assets/images/og-default.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F2EC'/%3E%3Crect x='0.5' y='0.5' width='31' height='31' fill='none' stroke='%23B07D3A' stroke-width='1'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-style='italic' fill='%231A1814' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- Blog styles -->
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGQ6160NZG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PGQ6160NZG');
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What You Leave Out of the Context Matters More",
+    "description": "Most people think more context means better output. Past a threshold, the opposite is true. The skill is curation: choosing what to include, what order to put it in, and what to deliberately leave out.",
+    "datePublished": "2026-06-17",
+    "author": {
+      "@type": "Person",
+      "name": "Henrique Santana",
+      "url": "https://henriquesantana.work/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Henrique Santana"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://henriquesantana.work/blog/what-you-leave-out-of-context.html"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Henrique Santana</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── ARTICLE HEADER ───────────────────────────────────── -->
+  <header class="article-header">
+    <a href="/blog/" class="back-link reveal">← All posts</a>
+    <h1 class="reveal reveal-delay-1">What You Leave Out of the Context Matters More</h1>
+    <div class="article-meta reveal reveal-delay-2">
+      <time datetime="2026-06-17">June 17, 2026</time>
+      <span>4 min read</span>
+    </div>
+  </header>
+
+  <!-- ── ARTICLE BODY ─────────────────────────────────────── -->
+  <article class="article-body">
+
+    <p>I used to paste everything into the context. Every relevant document, every prior conversation, every piece of background I thought the model might need. The logic was simple. More information means better output, and the context window is big enough to hold it all. What I got back was long, hedged, generic, and safe. The model was trying to accommodate everything I had given it, which meant it addressed nothing with any depth.</p>
+
+    <p>The realization that changed how I work is that context is a budget. Every document I put in the window competes with everything else for the model's attention. Past a certain point, adding more does not make the output better. It makes the output blander, because the model is averaging across more inputs and committing to fewer positions. The window being large enough to hold everything does not mean everything belongs in it. What fits and what helps are two different questions, and only the second one matters.</p>
+
+    <p>The model does not weight all context equally. Information near the beginning and near the end gets more attention than material buried in the middle of a long document. This is a measured, documented behavior, and it means that pasting a twenty-page document into the context practically guarantees the model will miss something important on page eleven. The output just gradually gets less specific, less opinionated, and more exhaustive in the unhelpful sense. If I notice the model producing "here are several considerations" instead of a clear answer, the first thing I check is whether I drowned the signal in context it did not need. Nine times out of ten, trimming the context fixes the output without changing the instruction at all.</p>
+
+    <p>The skill I have built is curation. Before a complex task, I still read everything, but I do not feed everything. I select the two or three documents most relevant to the specific question, summarize the rest into a paragraph of constraints rather than pasting the source text, and I sequence what I include so the most important framing comes first. A five-page research summary in the context produces worse output than a single paragraph stating what that research concluded and why it matters here. The model needs my judgment about what is important, not the raw material for forming its own opinion about what might be.</p>
+
+    <p>Ordering turned out to be the subtlest form of curation. What I put first in the context establishes the frame through which the model reads everything else. If the first thing it sees is the constraints and goals, the later material gets interpreted through that lens. If the first thing it sees is raw background, it builds its own frame from whatever it finds, and that frame may not be mine. I now spend real time deciding what goes at the top, because the top is what the model treats as the premise, and the premise shapes the conclusion more than the evidence does.</p>
+
+    <p>The hardest habit to break was the instinct to include the full source just in case. I kept thinking the model might need a detail buried on page four, so I would paste the entire document to be safe. What I learned is that if a detail is important enough to influence the output, I should state it explicitly in my own words rather than hoping the model locates it in a wall of text. Summarizing is doing the interpretive work myself instead of delegating it to a system that has no sense of what I care about. The conclusion I drew from a document is almost always more useful to the model than the document itself.</p>
+
+    <p>This is the skill I think will separate people who get consistently good results from people who get generic ones, and it has nothing to do with prompt tricks or model selection. It is the ability to look at a pile of relevant material and decide what the model actually needs for this specific task, right now. That takes domain knowledge. It takes knowing what matters and what is noise. It is the same judgment that makes a good briefing short rather than comprehensive, and it is not something the model can do for itself, because the model has no independent sense of what I am trying to accomplish with its output. The people I have seen get the best results treat context selection as the actual work, and the prompt as the easy part that follows.</p>
+
+    <p>So my context preparation now takes longer than writing the instruction. I read everything, form a view about what matters, and then include only that. The model gets a curated, sequenced, deliberately incomplete picture of the problem, and it produces sharper work precisely because of the incompleteness. The window is large. The discipline is keeping most of it empty.</p>
+
+  </article>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <strong>Henrique Santana</strong> · Principal Cloud Support Engineer, AWS
+      </p>
+    </div>
+  </footer>
+
+  <!-- ── SCROLL REVEAL ────────────────────────────────────── -->
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -5,13 +5,22 @@
   <link href="https://henriquesantana.work/blog/" rel="alternate" type="text/html"/>
   <link href="https://henriquesantana.work/blog/feed.xml" rel="self" type="application/atom+xml"/>
   <id>https://henriquesantana.work/blog/</id>
-  <updated>2026-06-11T08:00:00Z</updated>
+  <updated>2026-06-17T08:00:00Z</updated>
   <author>
     <name>Henrique Santana</name>
     <uri>https://henriquesantana.work/</uri>
   </author>
 
   <!-- ✏️ NEW ENTRIES GO HERE (newest first) -->
+
+  <entry>
+    <title>What You Leave Out of the Context Matters More</title>
+    <link href="https://henriquesantana.work/blog/what-you-leave-out-of-context.html" rel="alternate" type="text/html"/>
+    <id>https://henriquesantana.work/blog/what-you-leave-out-of-context.html</id>
+    <published>2026-06-17T08:00:00Z</published>
+    <updated>2026-06-17T08:00:00Z</updated>
+    <summary>Most people think more context means better output. Past a threshold, the opposite is true. The skill is curation: choosing what to include, what order to put it in, and what to deliberately leave out.</summary>
+  </entry>
 
   <entry>
     <title>AI Made Me Faster, Not Better</title>
