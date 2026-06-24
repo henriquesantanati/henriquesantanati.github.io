@@ -103,7 +103,7 @@
 
     <p>Running a model naively (load weights, call forward pass) wastes GPU memory and gives poor throughput under concurrency. The KV cache, which stores intermediate attention state for every active request, grows with sequence length and fragments VRAM. Inference engines optimize memory management, batching, and compute scheduling so you get more out of the same hardware.</p>
 
-    <h2>vLLM</h2>
+    <h2><a href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">vLLM</a></h2>
 
     <p>The most popular open-source option for serving transformers right now. Loads HuggingFace model weights as-is and applies optimizations at runtime, no pre-compilation step required.</p>
 
@@ -113,7 +113,7 @@
       <li><strong>Pick when:</strong> you need to serve a HuggingFace model to multiple concurrent users with good throughput, or you want a turnkey HTTP server around your model without writing serving code.</li>
     </ul>
 
-    <h2>TGI (Text Generation Inference)</h2>
+    <h2><a href="https://github.com/huggingface/text-generation-inference" target="_blank" rel="noopener">TGI (Text Generation Inference)</a></h2>
 
     <p>HuggingFace's own serving engine. Same category as vLLM, offering continuous batching, tensor parallelism, and quantization. Tighter integration with the HF ecosystem.</p>
 
@@ -122,7 +122,7 @@
       <li><strong>Pick when:</strong> your workflow already lives in HuggingFace and you value simplicity over squeezing the last tokens-per-second at 100+ concurrent requests.</li>
     </ul>
 
-    <h2>TensorRT-LLM</h2>
+    <h2><a href="https://github.com/NVIDIA/TensorRT-LLM" target="_blank" rel="noopener">TensorRT-LLM</a></h2>
 
     <p>NVIDIA's ahead-of-time compiler. You feed it your model, it produces an optimized engine binary with fused CUDA kernels tuned for your specific GPU architecture. Think GCC versus the Python interpreter.</p>
 
@@ -131,7 +131,7 @@
       <li><strong>Pick when:</strong> you have a stable model that rarely changes, you are committed to NVIDIA GPUs, and you need absolute maximum tokens-per-second. Common in high-scale production where the compilation cost is amortized across millions of requests.</li>
     </ul>
 
-    <h2>llama.cpp / GGML</h2>
+    <h2><a href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener">llama.cpp</a> / GGML</h2>
 
     <p>Runs models on CPUs and consumer hardware. Heavy quantization (4-bit, 5-bit, 8-bit), minimal dependencies, pure C/C++. Can offload layers to a GPU for hybrid execution.</p>
 
@@ -141,7 +141,7 @@
       <li><strong>Pick when:</strong> you are running on a MacBook, a gaming PC, or any environment without datacenter GPUs. Prototyping, local development, or workloads where you do not need a server.</li>
     </ul>
 
-    <h2>ONNX Runtime</h2>
+    <h2><a href="https://github.com/microsoft/onnxruntime" target="_blank" rel="noopener">ONNX Runtime</a></h2>
 
     <p>Microsoft's hardware-agnostic engine. Converts models to ONNX format and runs them on NVIDIA GPUs, AMD GPUs, Intel accelerators, CPUs, mobile, and edge devices.</p>
 
