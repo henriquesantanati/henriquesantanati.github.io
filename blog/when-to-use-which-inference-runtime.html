@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When to Use Which Inference Runtime | Henrique Santana</title>
+  <meta name="description" content="I spent time understanding the inference engine landscape and built my own reference. Here is what I learned about vLLM, TGI, TensorRT-LLM, llama.cpp, ONNX Runtime, and PyTorch native, and when each one earns its place.">
+
+  <link rel="canonical" href="https://henriquesantana.work/blog/when-to-use-which-inference-runtime.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://henriquesantana.work/blog/when-to-use-which-inference-runtime.html">
+  <meta property="og:title" content="When to Use Which Inference Runtime — Henrique Santana">
+  <meta property="og:description" content="I spent time understanding the inference engine landscape and built my own reference. Here is what I learned about vLLM, TGI, TensorRT-LLM, llama.cpp, ONNX Runtime, and PyTorch native, and when each one earns its place.">
+  <meta property="og:image" content="https://henriquesantana.work/assets/images/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Henrique Santana — henriquesantana.work">
+  <meta property="article:published_time" content="2026-06-24">
+  <meta property="article:author" content="Henrique Santana">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="When to Use Which Inference Runtime — Henrique Santana">
+  <meta name="twitter:description" content="I spent time understanding the inference engine landscape and built my own reference. Here is what I learned about vLLM, TGI, TensorRT-LLM, llama.cpp, ONNX Runtime, and PyTorch native, and when each one earns its place.">
+  <meta name="twitter:image" content="https://henriquesantana.work/assets/images/og-default.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F2EC'/%3E%3Crect x='0.5' y='0.5' width='31' height='31' fill='none' stroke='%23B07D3A' stroke-width='1'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-style='italic' fill='%231A1814' text-anchor='middle'%3EHS%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- Blog styles -->
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGQ6160NZG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PGQ6160NZG');
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "When to Use Which Inference Runtime",
+    "description": "I spent time understanding the inference engine landscape and built my own reference. Here is what I learned about vLLM, TGI, TensorRT-LLM, llama.cpp, ONNX Runtime, and PyTorch native, and when each one earns its place.",
+    "datePublished": "2026-06-24",
+    "author": {
+      "@type": "Person",
+      "name": "Henrique Santana",
+      "url": "https://henriquesantana.work/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Henrique Santana"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://henriquesantana.work/blog/when-to-use-which-inference-runtime.html"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Henrique Santana</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── ARTICLE HEADER ───────────────────────────────────── -->
+  <header class="article-header">
+    <a href="/blog/" class="back-link reveal">← All posts</a>
+    <h1 class="reveal reveal-delay-1">When to Use Which Inference Runtime</h1>
+    <div class="article-meta reveal reveal-delay-2">
+      <time datetime="2026-06-24">June 24, 2026</time>
+      <span>5 min read</span>
+    </div>
+  </header>
+
+  <!-- ── ARTICLE BODY ─────────────────────────────────────── -->
+  <article class="article-body">
+
+    <p>I recently spent time understanding the inference engine landscape because I needed to pick one for a model-serving workload and realized I had no mental model for the tradeoffs. Everything I found was either a benchmark post comparing numbers without context, or a getting-started tutorial that never explained <em>why</em> that particular engine was the right fit. So I built my own reference. Here is what I learned about the main options and when each one earns its place.</p>
+
+    <h2>The problem all of them solve</h2>
+
+    <p>Running a model naively (load weights, call forward pass) wastes GPU memory and gives poor throughput under concurrency. The KV cache, which stores intermediate attention state for every active request, grows with sequence length and fragments VRAM. Inference engines optimize memory management, batching, and compute scheduling so you get more out of the same hardware.</p>
+
+    <h2>vLLM</h2>
+
+    <p>The most popular open-source option for serving transformers right now. Loads HuggingFace model weights as-is and applies optimizations at runtime, no pre-compilation step required.</p>
+
+    <ul>
+      <li><strong>Key innovation:</strong> PagedAttention. Manages the KV cache like OS virtual memory, with fixed-size blocks allocated on demand. Eliminates fragmentation and achieves near-100% VRAM utilization versus 20-40% with naive serving.</li>
+      <li><strong>Also gives you:</strong> continuous batching (new requests join mid-generation), an OpenAI-compatible API server, tensor parallelism across GPUs, and quantization support.</li>
+      <li><strong>Pick when:</strong> you need to serve a HuggingFace model to multiple concurrent users with good throughput, or you want a turnkey HTTP server around your model without writing serving code.</li>
+    </ul>
+
+    <h2>TGI (Text Generation Inference)</h2>
+
+    <p>HuggingFace's own serving engine. Same category as vLLM, offering continuous batching, tensor parallelism, and quantization. Tighter integration with the HF ecosystem.</p>
+
+    <ul>
+      <li><strong>Difference from vLLM:</strong> simpler deployment if you are already deep in HuggingFace tooling. Slightly less throughput optimization at extreme concurrency. Better integration with model cards, tokenizers, and the Hub.</li>
+      <li><strong>Pick when:</strong> your workflow already lives in HuggingFace and you value simplicity over squeezing the last tokens-per-second at 100+ concurrent requests.</li>
+    </ul>
+
+    <h2>TensorRT-LLM</h2>
+
+    <p>NVIDIA's ahead-of-time compiler. You feed it your model, it produces an optimized engine binary with fused CUDA kernels tuned for your specific GPU architecture. Think GCC versus the Python interpreter.</p>
+
+    <ul>
+      <li><strong>Key tradeoff:</strong> a compilation step before serving (30+ minutes). The output binary only runs on the target GPU family. Change GPU type or model version and you recompile. Fastest raw inference on NVIDIA hardware because it exploits hardware-specific features like FP8 on Hopper.</li>
+      <li><strong>Pick when:</strong> you have a stable model that rarely changes, you are committed to NVIDIA GPUs, and you need absolute maximum tokens-per-second. Common in high-scale production where the compilation cost is amortized across millions of requests.</li>
+    </ul>
+
+    <h2>llama.cpp / GGML</h2>
+
+    <p>Runs models on CPUs and consumer hardware. Heavy quantization (4-bit, 5-bit, 8-bit), minimal dependencies, pure C/C++. Can offload layers to a GPU for hybrid execution.</p>
+
+    <ul>
+      <li><strong>Difference from everything above:</strong> not designed for high-throughput serving. Designed for running models locally with minimal resources. Aggressive quantization trades some precision for accessibility.</li>
+      <li><strong>Quality note:</strong> for text generation, 4-bit quantization is often acceptable. For audio waveform generation or anything where precision matters at the decimal level, quality degradation may be noticeable.</li>
+      <li><strong>Pick when:</strong> you are running on a MacBook, a gaming PC, or any environment without datacenter GPUs. Prototyping, local development, or workloads where you do not need a server.</li>
+    </ul>
+
+    <h2>ONNX Runtime</h2>
+
+    <p>Microsoft's hardware-agnostic engine. Converts models to ONNX format and runs them on NVIDIA GPUs, AMD GPUs, Intel accelerators, CPUs, mobile, and edge devices.</p>
+
+    <ul>
+      <li><strong>Difference from others:</strong> not specialized for LLMs or autoregressive generation. More general-purpose, covering classical ML, vision models, and smaller networks. Jack of all trades.</li>
+      <li><strong>Pick when:</strong> hardware portability matters (multi-cloud, edge, AMD GPUs), or you are serving non-LLM models where the autoregressive optimizations of vLLM/TGI are irrelevant.</li>
+    </ul>
+
+    <h2>PyTorch native</h2>
+
+    <p>No engine, no server, no optimization layer. Load the weights, call model.generate(), and let PyTorch handle it. PyTorch 2.x's torch.compile can JIT-optimize some operations, but there is no memory management or batching infrastructure.</p>
+
+    <ul>
+      <li><strong>Pick when:</strong> simplicity matters more than performance. Prototyping, batch jobs that process one item at a time, or low-traffic internal tools where GPU utilization efficiency is not the concern.</li>
+    </ul>
+
+    <h2>How I decide</h2>
+
+    <p>After going through all of this, my mental model collapsed into a few questions I ask in order:</p>
+
+    <ul>
+      <li><strong>What hardware am I targeting?</strong> CPU-only or consumer hardware points to llama.cpp. Must be hardware-agnostic points to ONNX Runtime. NVIDIA GPU means continue below.</li>
+      <li><strong>How many concurrent users?</strong> Single-request or low concurrency: PyTorch native or vLLM (for serving convenience). High concurrency (10+ simultaneous): vLLM or TGI.</li>
+      <li><strong>Latency or flexibility?</strong> If the model is stable and I need maximum speed, TensorRT-LLM. If I need to iterate quickly and swap model versions, vLLM or TGI.</li>
+    </ul>
+
+    <p>This decision is not permanent. Most workloads start with PyTorch native or vLLM because the priority is validating the model works at all. The engine swap happens later, when the workload is stable and performance or cost becomes the constraint. Picking the "best" engine before knowing the workload shape is premature optimization in the most literal sense.</p>
+
+  </article>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <strong>Henrique Santana</strong> · Principal Cloud Support Engineer, AWS
+      </p>
+    </div>
+  </footer>
+
+  <!-- ── SCROLL REVEAL ────────────────────────────────────── -->
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>

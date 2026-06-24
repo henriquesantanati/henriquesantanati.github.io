@@ -1,7 +1,7 @@
 {
-  "title": "What You Leave Out of the Context Matters More",
-  "slug": "what-you-leave-out-of-context",
-  "url": "https://henriquesantana.work/blog/what-you-leave-out-of-context.html",
-  "date": "2026-06-17",
-  "description": "Most people think more context means better output. Past a threshold, the opposite is true. The real skill is choosing what to include and what to leave out."
+  "title": "When to Use Which Inference Runtime",
+  "slug": "when-to-use-which-inference-runtime",
+  "url": "https://henriquesantana.work/blog/when-to-use-which-inference-runtime.html",
+  "date": "2026-06-24",
+  "description": "I spent time understanding the inference engine landscape and built my own reference. Here is what I learned about vLLM, TGI, TensorRT-LLM, llama.cpp, ONNX Runtime, and PyTorch native, and when each one earns its place."
 }

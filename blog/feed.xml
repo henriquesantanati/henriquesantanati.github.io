@@ -5,13 +5,22 @@
   <link href="https://henriquesantana.work/blog/" rel="alternate" type="text/html"/>
   <link href="https://henriquesantana.work/blog/feed.xml" rel="self" type="application/atom+xml"/>
   <id>https://henriquesantana.work/blog/</id>
-  <updated>2026-06-17T08:00:00Z</updated>
+  <updated>2026-06-24T08:00:00Z</updated>
   <author>
     <name>Henrique Santana</name>
     <uri>https://henriquesantana.work/</uri>
   </author>
 
   <!-- ✏️ NEW ENTRIES GO HERE (newest first) -->
+
+  <entry>
+    <title>When to Use Which Inference Runtime</title>
+    <link href="https://henriquesantana.work/blog/when-to-use-which-inference-runtime.html" rel="alternate" type="text/html"/>
+    <id>https://henriquesantana.work/blog/when-to-use-which-inference-runtime.html</id>
+    <published>2026-06-24T08:00:00Z</published>
+    <updated>2026-06-24T08:00:00Z</updated>
+    <summary>I spent time understanding the inference engine landscape and built my own reference. Here is what I learned about vLLM, TGI, TensorRT-LLM, llama.cpp, ONNX Runtime, and PyTorch native, and when each one earns its place.</summary>
+  </entry>
 
   <entry>
     <title>What You Leave Out of the Context Matters More</title>

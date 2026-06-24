@@ -8,6 +8,7 @@ Personal website and blog of Henrique Santana, covering AI-assisted development 
 
 ## Blog Posts
 
+- [When to Use Which Inference Runtime](https://henriquesantana.work/blog/when-to-use-which-inference-runtime.html): A reference for inference engine options (vLLM, TGI, TensorRT-LLM, llama.cpp, ONNX Runtime, PyTorch native) and when each one earns its place.
 - [What You Leave Out of the Context Matters More](https://henriquesantana.work/blog/what-you-leave-out-of-context.html): Context is a budget with a cost per item. Past a threshold, more material makes the model average across inputs and hedge. The skill is curation.
 - [AI Made Me Faster, Not Better](https://henriquesantana.work/blog/ai-made-me-faster-not-better.html): AI tools amplify the engineer using them, they do not set the quality bar. Same assistant, two engineers, opposite outcomes. The tool changes speed, not standard.
 - [Gates That Block, or None](https://henriquesantana.work/blog/gates-that-block-or-none.html): Every quality check in an AI pipeline should be binary pass/fail. A gate either stops the output from shipping, or it should not exist.

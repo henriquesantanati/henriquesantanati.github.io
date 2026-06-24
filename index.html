@@ -47,19 +47,70 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://henriquesantana.work/#person",
     "name": "Henrique Santana",
+    "givenName": "Henrique",
+    "familyName": "Santana",
     "jobTitle": "Principal Cloud Support Engineer",
+    "description": "Principal Cloud Support Engineer at AWS specializing in Amazon ECS, Amazon EKS, and AI/ML infrastructure. KubeCon and AWS re:Invent speaker. Co-founder of Cloud Native Dublin.",
+    "nationality": {
+      "@type": "Country",
+      "name": "Brazil"
+    },
+    "workLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dublin",
+        "addressCountry": "IE"
+      }
+    },
     "worksFor": {
       "@type": "Organization",
       "name": "Amazon Web Services",
       "url": "https://aws.amazon.com"
     },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Technological University of the Shannon",
+        "url": "https://tus.ie"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidade Salvador"
+      }
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "educationalLevel": "Master's",
+        "name": "MSc in Software Design With Artificial Intelligence"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "educationalLevel": "Bachelor's",
+        "name": "BSc in Computer Science, Information Technology"
+      }
+    ],
+    "knowsAbout": [
+      "Amazon Elastic Container Service",
+      "Amazon Elastic Kubernetes Service",
+      "Kubernetes",
+      "AWS Fargate",
+      "Cloud Architecture",
+      "AI/ML Infrastructure",
+      "Containers"
+    ],
     "url": "https://henriquesantana.work/",
     "image": "https://henriquesantana.work/assets/images/og-default.jpg",
     "sameAs": [
       "https://www.linkedin.com/in/henriquessantana/",
       "https://github.com/henriquesantanati",
-      "https://sessionize.com/henrique-santana/"
+      "https://sessionize.com/henrique-santana/",
+      "https://community.cncf.io/cloud-native-dublin/"
     ]
   }
   </script>
@@ -1055,6 +1106,14 @@
 
         <!-- ✏️ LATEST POSTS: keep 3-5 entries here, newest first.
              Updated automatically by the blog-writer scheduled task. -->
+
+        <div class="blog-preview-item reveal">
+          <a href="/blog/when-to-use-which-inference-runtime.html">
+            <div class="blog-preview-title">When to Use Which Inference Runtime</div>
+            <div class="blog-preview-desc">I spent time understanding the inference engine landscape and built my own reference. Here is what I learned about vLLM, TGI, TensorRT-LLM, llama.cpp, ONNX Runtime, and PyTorch native, and when each one earns its place.</div>
+            <div class="blog-preview-meta">June 24, 2026 · 5 min read</div>
+          </a>
+        </div>
 
         <div class="blog-preview-item reveal">
           <a href="/blog/what-you-leave-out-of-context.html">
