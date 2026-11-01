@@ -54,8 +54,7 @@ jobs:
               if (days > warnDays) return;
               title = `${titlePrefix}: expires ${date}, renew now`;
               body = `The live ${url} expires on **${date}** (${days} days from this check).\n\n` +
-                     `Update the Expires field where the live file is served. The GitHub Pages origin does not serve ` +
-                     `/.well-known/security.txt today, so the copy in this repo is not what visitors see.`;
+                     `The file is served by Cloudflare at the edge, not from this repo. Update the Expires field there.`;
             }
 
             const open = await github.paginate(github.rest.issues.listForRepo, {
